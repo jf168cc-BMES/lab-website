@@ -1,0 +1,36 @@
+# 國內招生頁（只有中文）。名額與時程每年招生季前核對一次。
+meta:
+  title: {zh: "加入我們｜奈米醫藥與幹細胞工程實驗室"}
+  description: {zh: "清華大學生醫工程與環境科學系奈米醫藥與幹細胞工程實驗室的招生資訊：專題生、碩士生、博士生、研究助理與博士後研究員。"}
+heading: {zh: "加入我們"}
+intro: {zh: "歡迎對奈米醫藥、基因遞送與幹細胞工程有興趣的同學。"}
+intro_en: "International students, please see [Join Us](../../join-us/)."   # 給國際生的英文一句話，網頁上會標成英文（lang="en"）
+positions:
+  heading: {zh: "我們在找"}
+  entries:
+    - title: {zh: "大學部專題生"}
+      text: {zh: "醫環系與他系同學都歡迎，有興趣請來信。"}
+    - title: {zh: "碩士生"}
+      text: {zh: "透過碩士班甄試或考試入學。系上 2026-09-09 更新的公告：116 學年度（2027 年 9 月入學）碩士班甲組，張建文老師擬收 2 名（不含 MINT 學程）。"}
+    - title: {zh: "原科院 MINT 學程"}
+      text: {zh: "題目是「非病毒磁性基因傳遞技術及其癌症免疫治療應用」，與陳仁焜副研究員共同指導，招收碩士生與博士生。"}
+    - title: {zh: "博士生"}
+      text: {zh: "名額依系上招生公告。"}
+    - title: {zh: "研究助理、博士後研究員"}
+      text: {zh: "目前有研究助理與博士後研究員職缺，有興趣請來信洽詢。"}
+  background: {zh: "歡迎化學、化工、材料、藥學、生醫工程背景的同學。修過高分子、膠體或藥劑學更好。"}
+learn_heading: {zh: "你會學到"}
+careers:
+  heading: {zh: "學長姐的出路"}
+  text: {zh: ""}   # 先留白（Jeff 2026-10-28）：畢業成員的去向（例如升學、生技業、半導體業），問到本人、拿到書面同意後補上；標題照樣顯示
+contact:
+  heading: {zh: "怎麼聯絡"}
+  mail_subject: {zh: "[專題／碩士／博士] 姓名－有興趣的主題"}   # 「寄信給張老師」按鈕的主旨，與下面 text 裡建議的主旨相同
+  text: {zh: "寫信給張建文老師（[chienwen@mx.nthu.edu.tw](mailto:chienwen@mx.nthu.edu.tw)）。主旨請寫「[專題／碩士／博士] 姓名－有興趣的主題」，附上成績單與簡歷，用一段話說明想做什麼。"}
+dates:
+  heading: {zh: "時程與相關連結"}
+  text: {zh: "碩士班甄試與考試的時程，以系上招生公告為準。"}
+  entries:
+    - {label: {zh: "醫環系招生資訊"}, url: "https://bmes.site.nthu.edu.tw/p/412-1360-23212.php?Lang=zh-tw"}
+    - {label: {zh: "116 學年度碩士班教授擬收名額"}, url: "https://bmes.site.nthu.edu.tw/p/406-1360-314015,r6634.php?Lang=zh-tw"}
+    - {label: {zh: "原科院 MINT 學程"}, url: "https://nuclear.site.nthu.edu.tw/p/426-1071-175.php?Lang=zh-tw"}

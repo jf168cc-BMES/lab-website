@@ -1,0 +1,21 @@
+meta:
+  title:
+    en: "Contact | Nanomedicine & Stem Cell Engineering Lab"
+    zh: "聯絡我們｜奈米醫藥與幹細胞工程實驗室"
+heading: {en: "Contact", zh: "聯絡我們"}
+intro:
+  en: "For collaboration or student inquiries, please email Prof. Chang. Prospective students, please read the [Join Us](../join-us/) page first."
+  zh: "合作或學生詢問，請寫信給張建文老師。想加入的同學，請先看[加入我們](../join/)。"
+labels:
+  email: {en: "Email", zh: "電子郵件"}
+  phone: {en: "Phone", zh: "電話"}
+  address: {en: "Address", zh: "地址"}
+  office: {en: "Office", zh: "辦公室"}
+  lab: {en: "Lab", zh: "實驗室"}
+map_url: "https://www.google.com/maps/search/?api=1&query=National+Tsing+Hua+University+Hsinchu"
+map_label: {en: "Open in Google Maps", zh: "在 Google 地圖開啟"}
+getting_here:
+  heading: {en: "Getting here", zh: "交通"}
+  text:
+    en: "NTHU's main campus is in Hsinchu City. For transport from the airport, residence permits, and other arrival information, see the [NTHU Campus Life page](https://oga.site.nthu.edu.tw/p/412-1524-18665.php?Lang=en)."
+    zh: "清華大學校本部位於新竹市。從機場到清華的交通與到校後的手續，請看[全球處的校園生活頁](https://oga.site.nthu.edu.tw/p/412-1524-18665.php?Lang=zh-tw)。"

@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% set meta_title = page.meta.title | plain %}
+{% set meta_desc = page.meta.description | plain %}
+{% block content %}
+<section class="page-head join-head">
+  <div class="container">
+    <h1>{{ page.heading | t }}</h1>
+    <p class="lead">{{ page.intro | tx }}</p>
+    <p class="head-actions">
+      <a class="btn btn-primary" href="{{ mailto(site.email, page.apply.mail_subject | t) }}">{{ m.svg('mail') }}{{ site.email_button | t }}</a>
+    </p>
+    <p class="updated">{{ page.updated_label | t }}: {{ updated }}</p>
+    <p class="domestic-note" lang="zh-Hant">{{ page.domestic_note | mdi }}</p>
+    <nav class="toc" aria-label="On this page">
+      {% for item in page.toc %}<a href="#{{ item.id }}">{{ item.label | t }}</a>{% endfor %}
+    </nav>
+  </div>
+</section>
+
+<section class="section" id="positions">
+  <div class="container">
+    <h2 class="section-title">{{ page.positions.heading | t }}</h2>
+    <p class="note">{{ page.positions.note | tx }}</p>
+    <div class="cards cards-4">
+      {% for p in page.positions.entries %}
+      <article class="card">
+        <h3>{{ p.title | tx }}</h3>
+        <p>{{ p.text | tx }}</p>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="two-col">
+      <div>
+        <h3 class="small-title">{{ page.positions.background_heading | t }}</h3>
+        <p>{{ page.positions.background | tx }}</p>
+      </div>
+      <div>
+        <h3 class="small-title">{{ page.positions.themes_heading | t }}</h3>
+        <ul class="plain-list">
+          {% for th in research.themes %}<li><a href="{{ href('research') }}#{{ th.id }}">{{ th.title | t }}</a></li>{% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="funding">
+  <div class="container">
+    <h2 class="section-title">{{ page.funding.heading | t }}</h2>
+    <p class="lead small">{{ page.funding.intro | tx }}</p>
+    <div class="cards cards-2 funding-grid">
+      {% for f in page.funding.entries %}
+      <article class="card funding-card">
+        <h3>{{ f.name | tx }}</h3>
+        <p>{{ f.text | tx }}</p>
+        {% if f.url %}<a class="card-link" href="{{ f.url }}" rel="noopener">{{ 'Official page' }} <span aria-hidden="true">→</span></a>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="apply">
+  <div class="container">
+    <h2 class="section-title">{{ page.apply.heading | t }}</h2>
+    <ol class="steps">
+      {% for s in page.apply.steps %}<li>{{ s | mdi }}</li>{% endfor %}
+    </ol>
+    <div class="email-box">
+      <h3 class="small-title">{{ page.apply.email_heading | t }}</h3>
+      <pre>{% for line in page.apply.email_lines %}{{ line }}
+{% endfor %}</pre>
+      {% if page.apply.response %}<p>{{ page.apply.response | tx }}</p>{% endif %}
+      <a class="btn btn-primary" href="{{ mailto(site.email, page.apply.mail_subject | t) }}">{{ m.svg('mail') }}{{ site.email_button | t }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="dates">
+  <div class="container">
+    <h2 class="section-title">{{ page.dates.heading | t }}</h2>
+    <dl class="date-list">
+      {% for d in page.dates.entries %}
+      <div class="date-row"><dt>{{ d.label | tx }}</dt><dd>{{ d.text | tx }}</dd></div>
+      {% endfor %}
+    </dl>
+    <a class="card-link" href="{{ page.dates.link }}" rel="noopener">{{ page.dates.link_label | t }} <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<section class="section" id="life">
+  <div class="container">
+    <h2 class="section-title">{{ page.life.heading | t }}</h2>
+    <div class="cards cards-3">
+      {% for l in page.life.entries %}
+      <article class="card">
+        <h3>{{ l.title | tx }}</h3>
+        <p>{{ l.text | mdi }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="faq">
+  <div class="container narrow">
+    <h2 class="section-title">{{ page.faq.heading | t }}</h2>
+    {% for f in page.faq.entries %}
+    {% set answer = f.a | tx %}
+    <details class="faq">
+      <summary>{{ f.q | tx }}</summary>
+      {% if answer %}<p>{{ answer }}</p>{% endif %}
+    </details>
+    {% endfor %}
+    <h2 class="section-title spaced">{{ page.voices.heading | t }}</h2>
+    {% set voices_note = page.voices.note | tx %}
+    {% if voices_note %}<p class="placeholder">{{ voices_note }}</p>{% endif %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">{{ page.links.heading | t }}</h2>
+    <ul class="link-grid">
+      {% for l in page.links.entries %}<li><a href="{{ l.url }}" rel="noopener">{{ l.label | t }}</a></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock %}

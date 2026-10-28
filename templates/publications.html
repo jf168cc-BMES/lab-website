@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% set meta_title = page.meta.title | plain %}
+{% set meta_desc = page.intro | plain %}
+{% block content %}
+<section class="page-head">
+  <div class="container">
+    <h1>{{ page.heading | t }}</h1>
+    <p class="lead">{{ page.intro | tx }}</p>
+    <p class="corr-note">{{ page.corr_note | t }}</p>
+    <p class="profile-links">
+      <a href="{{ site.links.google_scholar }}" rel="noopener">Google Scholar</a>
+      <a href="{{ site.links.orcid }}" rel="noopener">ORCID</a>
+      <a href="{{ site.links.researchgate }}" rel="noopener">ResearchGate</a>
+    </p>
+    <nav class="toc" aria-label="{{ '本頁內容' if lang == 'zh' else 'On this page' }}">
+      {% for item in page.toc %}<a href="#{{ item.id }}">{{ item.label | t }}</a>{% endfor %}
+    </nav>
+  </div>
+</section>
+
+<section class="section" id="selected">
+  <div class="container narrow">
+    <h2 class="section-title">{{ page.selected_heading | t }}</h2>
+    <ul class="pub-cards">
+      {% for p in selected_pubs %}{{ m.pub_card(p, lang) }}{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section alt" id="all-papers">
+  <div class="container narrow">
+    <h2 class="section-title">{{ page.all_heading | t }}</h2>
+    <ul class="pub-list">
+      {% for p in pub_all %}{{ m.pub(p) }}{% endfor %}
+    </ul>
+    <p class="back-top"><a class="more-link" href="#top"><span aria-hidden="true">↑</span> {{ page.back_to_top | t }}</a></p>
+  </div>
+</section>
+{% endblock %}

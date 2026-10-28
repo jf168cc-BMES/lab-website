@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% set meta_title = page.meta.title | plain %}
+{% set meta_desc = page.intro | plain %}
+{% block content %}
+<section class="page-head">
+  <div class="container">
+    <h1>{{ page.heading | t }}</h1>
+    <p class="lead">{{ page.intro | tx }}</p>
+    <nav class="toc" aria-label="{{ '研究主題' if lang == 'zh' else 'Research themes' }}">
+      {% for th in page.themes %}
+      <a href="#{{ th.id }}">{{ th.title | t }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</section>
+
+{% for th in page.themes %}
+{% set img = theme_images.get(th.id) %}
+<section class="section{{ ' alt' if loop.index is even }}" id="{{ th.id }}">
+  <div class="container theme-detail{{ ' has-figure' if img }}{{ ' flip' if img and loop.index is even }}">
+    {% if img %}
+    <a class="theme-figure" href="{{ url(img.lg) }}" data-zoom>
+      <img src="{{ url(img.sm) }}" srcset="{{ url(img.sm) }} 900w, {{ url(img.lg) }} 1600w" sizes="(max-width: 760px) 92vw, 460px" alt="{{ '示意圖：' if lang == 'zh' else 'Illustration: ' }}{{ th.title | plain }}" width="{{ img.w }}" height="{{ img.h }}" loading="lazy" decoding="async">
+    </a>
+    {% else %}
+    <div class="theme-icon">{{ m.svg(th.icon) }}</div>
+    {% endif %}
+    <div class="theme-body">
+      <h2>{{ th.title | tx }}</h2>
+      <p>{{ th.body | tx }}</p>
+      <h3 class="small-title">{{ page.learn_label | t }}</h3>
+      <ul class="chips">
+        {% for item in th.learn %}<li>{{ item | tx }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">{{ page.techniques_heading | t }}</h2>
+    <div class="cards cards-3">
+      {% for tq in page.techniques %}
+      <article class="card tech-card">
+        <h3>{{ tq.title | tx }}</h3>
+        <p>{{ tq.text | tx }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

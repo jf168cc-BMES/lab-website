@@ -1,0 +1,16 @@
+meta:
+  title:
+    en: "Publications | Nanomedicine & Stem Cell Engineering Lab"
+    zh: "論文｜奈米醫藥與幹細胞工程實驗室"
+heading: {en: "Publications", zh: "論文"}
+intro:
+  en: "This list is generated from Prof. Chang's ORCID record, with author details from Crossref. Selected papers are listed first."
+  zh: "這份清單由張建文老師的 ORCID 紀錄產生，作者資料取自 Crossref。精選論文列在最前面。"
+corr_note: {en: "* Corresponding author", zh: "* 通訊作者"}
+selected_heading: {en: "Selected papers", zh: "精選論文"}
+all_heading: {en: "All papers", zh: "全部論文"}
+profiles_label: {en: "Profiles", zh: "學術檔案"}
+toc:   # 標題區的跳轉按鈕；id 對應下面兩段的 id（精選論文、完整清單）
+  - {id: selected, label: {en: "Selected papers", zh: "精選論文"}}
+  - {id: all-papers, label: {en: "Full list", zh: "完整清單"}}
+back_to_top: {en: "Back to top", zh: "回到頂端"}

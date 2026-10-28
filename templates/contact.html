@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% set meta_title = page.meta.title | plain %}
+{% set meta_desc = page.intro | plain %}
+{% block content %}
+<section class="page-head">
+  <div class="container">
+    <h1>{{ page.heading | t }}</h1>
+    <p class="lead">{{ page.intro | mdi }}</p>
+    <p class="head-actions">
+      <a class="btn btn-primary" href="{{ mailto(site.email) }}">{{ m.svg('mail') }}{{ site.email_button | t }}</a>
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container contact-grid">
+    <div class="contact-item">
+      <span class="contact-icon">{{ m.svg('mail') }}</span>
+      <div><h2>{{ page.labels.email | t }}</h2><p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p></div>
+    </div>
+    <div class="contact-item">
+      <span class="contact-icon">{{ m.svg('phone') }}</span>
+      <div><h2>{{ page.labels.phone | t }}</h2><p><a href="tel:{{ site.phone_tel }}">{{ site.phone | t }}</a></p></div>
+    </div>
+    <div class="contact-item">
+      <span class="contact-icon">{{ m.svg('pin') }}</span>
+      <div>
+        <h2>{{ page.labels.address | t }}</h2>
+        <p>{{ site.department | t }}<br>{{ site.university | t }}<br>{{ site.address | t }}</p>
+        <a class="card-link" href="{{ page.map_url }}" rel="noopener">{{ page.map_label | t }} <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="contact-item">
+      <span class="contact-icon">{{ m.svg('door') }}</span>
+      <div>
+        <h2>{{ page.labels.office | t }}</h2>
+        <p>{{ site.office | tx }}</p>
+        {% if page.lab_location %}<p>{{ page.labels.lab | t }}{{ '：' if lang == 'zh' else ': ' }}{{ page.lab_location | tx }}</p>{% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container narrow">
+    <h2 class="section-title">{{ page.getting_here.heading | t }}</h2>
+    <p>{{ page.getting_here.text | mdi }}</p>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% set meta_title = page.meta.title | plain %}
+{% set meta_desc = site.description | plain %}
+{# 主視覺背景圖提早載入：寬螢幕與窄螢幕各載各的（跟 style.css 的 860px 斷點一致） #}
+{% block head_extra %}
+<link rel="preload" as="image" type="image/webp" href="{{ url('static/img/bg/hero-sm.webp') }}" media="(max-width: 860px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" href="{{ url('static/img/bg/hero.webp') }}" media="(min-width: 861px)" fetchpriority="high">
+{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <p class="kicker">{{ page.hero.kicker | tx }}</p>
+      <h1>{{ site.lab_name | tx }}</h1>
+      <p class="tagline">{{ page.hero.tagline | tx }}</p>
+      <p class="recruiting"><span class="pulse" aria-hidden="true"></span><span>{{ page.hero.recruiting | tx }}</span></p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ href('join') }}">{{ page.hero.primary | t }}</a>
+        <a class="btn btn-ghost" href="{{ href('research') }}">{{ page.hero.secondary | t }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">{{ page.themes_heading | t }}</h2>
+    <div class="cards cards-4">
+      {% for th in research.themes %}
+      {% set ti = theme_images.get(th.id) %}
+      <article class="card theme-card{{ ' has-thumb' if ti and ti.xs }}">
+        {% if ti and ti.xs %}
+        {# 水彩縮圖（3:2，480 寬）：裝飾用，標題與「看更多」連結已經說明內容 #}
+        <a class="theme-thumb" href="{{ href('research') }}#{{ th.id }}" tabindex="-1" aria-hidden="true">
+          <img src="{{ url(ti.xs) }}" srcset="{{ url(ti.xs) }} {{ ti.xs_w }}w, {{ url(ti.sm) }} {{ ti.w }}w" sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1100px) calc(50vw - 30px), 255px" alt="" width="{{ ti.xs_w }}" height="{{ ti.xs_h }}" loading="lazy" decoding="async">
+        </a>
+        {% else %}
+        <div class="card-icon">{{ m.svg(th.icon) }}</div>
+        {% endif %}
+        <div class="theme-card-body">
+          <h3>{{ th.title | tx }}</h3>
+          <p>{{ th.short | tx }}</p>
+          <a class="card-link" href="{{ href('research') }}#{{ th.id }}">{{ page.themes_more | t }} <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <h2 class="section-title">{{ page.why.heading | t }}</h2>
+    <div class="cards cards-3">
+      {% for pt in page.why.points %}
+      <article class="card why-card">
+        <span class="why-num" aria-hidden="true">{{ loop.index }}</span>
+        <h3>{{ pt.title | tx }}</h3>
+        <p>{{ pt.text | tx }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="papers">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">{{ page.papers.heading | t }}</h2>
+      <a class="more-link" href="{{ href('publications') }}#selected">{{ page.papers.more | t }} <span aria-hidden="true">→</span></a>
+    </div>
+    {# 最新 3 篇精選論文：整張卡片都是連結，連到論文頁上同一篇的卡片；手機只列文字（不載示意圖） #}
+    <ul class="teaser-grid">
+      {% for p in teaser_pubs %}
+      <li class="teaser-card">
+        {% if p.images %}
+        {% set im = p.images[0] %}
+        <div class="teaser-fig"><img src="{{ url(im.sm) }}" alt="" width="{{ im.w }}" height="{{ im.h }}" loading="lazy" decoding="async"></div>
+        {% endif %}
+        <div class="teaser-body">
+          <p class="teaser-venue"><em>{{ p.journal }}</em> · {{ p.year }}</p>
+          <h3 class="teaser-title"><a href="{{ href('publications') }}#pub-{{ p.slug }}">{{ (p.title_override or p.title) | ptitle }}</a></h3>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section alt" id="pi">
+  <div class="container">
+    <div class="card pi-strip">
+      <img class="pi-strip-photo" src="{{ url(people.pi.photo_sm) }}" alt="{{ people.pi.photo_alt | plain }}" width="360" height="450" loading="lazy" decoding="async">
+      <div class="pi-strip-text">
+        <h2>{{ page.pi.heading | t }}</h2>
+        <p>{{ page.pi.text | tx }}</p>
+        <a class="card-link" href="{{ href('people') }}">{{ page.pi.more | t }} <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">{{ page.news_heading | t }}</h2>
+      <a class="more-link" href="{{ href('news') }}">{{ page.news_more | t }} <span aria-hidden="true">→</span></a>
+    </div>
+    <ul class="news-list">
+      {% for n in news_items[:3] %}
+      <li class="news-item">
+        <time class="news-date">{{ n.date_label }}</time>
+        <div>
+          <h3>{{ n.title | tx }}</h3>
+          <p>{{ n.text | tx }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta-inner">
+    <div>
+      <h2>{{ page.cta.heading | t }}</h2>
+      <p>{{ page.cta.text | tx }}</p>
+    </div>
+    <a class="btn btn-primary" href="{{ href('join') }}">{{ page.cta.button | t }}</a>
+  </div>
+</section>
+{% endblock %}

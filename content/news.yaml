@@ -1,0 +1,74 @@
+# 消息：date 寫 YYYY 或 YYYY-MM，新的放哪裡都可以，產生時會自動排序。
+meta:
+  title:
+    en: "News | Nanomedicine & Stem Cell Engineering Lab"
+    zh: "消息｜奈米醫藥與幹細胞工程實驗室"
+heading: {en: "News", zh: "消息"}
+more_label: {en: "Details", zh: "詳細內容"}
+items:
+  - date: "2026-04"
+    title:
+      en: "2026 TEEP research program open for applications"
+      zh: "2026 年 TEEP 短期研究計畫開放申請"
+    text:
+      en: "International students can apply for a 3- to 6-month research stay on biomaterials, biopolymers, and drug delivery. Applications close on November 30, 2026, and the program period ends on December 31, 2026."
+      zh: "國際學生可以申請 3 到 6 個月的短期研究，主題是生醫材料、生物高分子與藥物遞送。申請截止日是 2026 年 11 月 30 日；計畫期間到 2026 年 12 月 31 日。"
+    link: "https://teep.studyintaiwan.org/program/1531"
+  - date: "2026-02"
+    title:
+      en: "Prof. Chang becomes Department Chair"
+      zh: "張建文教授接任系主任"
+    text:
+      en: "Prof. Chien-Wen Chang began his term as Chair of the Department of Biomedical Engineering and Environmental Sciences on February 1, 2026."
+      zh: "張建文教授自 2026 年 2 月 1 日起擔任生醫工程與環境科學系系主任。"
+  - date: "2025-09"
+    title:
+      en: "New paper in Drug Delivery and Translational Research"
+      zh: "論文發表於 Drug Delivery and Translational Research"
+    text:
+      en: "Hanging-drop culture reshapes the mesenchymal stem cell transcriptome, enhances chemotaxis, and helps the cells pass through the lungs after intravenous injection."
+      zh: "懸滴培養改變了間質幹細胞的轉錄體，提升趨化能力，也減少靜脈注射後滯留在肺部的情形。"
+    doi: "10.1007/s13346-025-01927-4"
+  - date: "2024"
+    title:
+      en: "New paper in Biosensors and Bioelectronics"
+      zh: "論文發表於 Biosensors and Bioelectronics"
+    text:
+      en: "A biodegradable nano-sensor carrying molecular beacons identifies and isolates cancer cells with inherent multidrug resistance."
+      zh: "攜帶分子信標的可降解奈米感測器，可以辨識並分離具有先天多重抗藥性的癌細胞。"
+    doi: "10.1016/j.bios.2023.115985"
+  - date: "2026"
+    title:
+      en: "Prof. Chau-Jen Lee Research Scholar Award"
+      zh: "張建文教授獲李昭仁教授生醫工程研究學者獎"
+    text:
+      en: "Prof. Chien-Wen Chang received the Prof. Chau-Jen Lee Research Scholar Award, which recognizes outstanding research in biomaterials and drug delivery."
+      zh: "張建文教授獲得李昭仁教授生醫工程研究學者獎。這個獎表揚在生醫材料與藥物制放領域有傑出研究的學者。"
+  - date: "2023"
+    title:
+      en: "Future Tech Award and Prof. Chau-Jen Lee Biomedical Engineering Award"
+      zh: "獲未來科技獎與李昭仁教授生醫工程獎"
+    text:
+      en: "The lab received the Future Tech Award, and Prof. Chang received the Prof. Chau-Jen Lee Biomedical Engineering Award."
+      zh: "實驗室獲得未來科技獎；張建文教授獲得李昭仁教授生醫工程獎。"
+  - date: "2022"
+    title:
+      en: "19th National Innovation Excellence Award"
+      zh: "獲第 19 屆國家新創精進獎"
+    text:
+      en: "The lab received the 19th National Innovation Excellence Award."
+      zh: "實驗室獲得第 19 屆國家新創精進獎。"
+  - date: "2021"
+    title:
+      en: "Future Tech Award"
+      zh: "獲未來科技獎"
+    text:
+      en: "The lab received the Future Tech Award."
+      zh: "實驗室獲得未來科技獎。"
+  - date: "2020"
+    title:
+      en: "17th National Innovation Award"
+      zh: "獲第 17 屆國家新創獎"
+    text:
+      en: "The lab received the 17th National Innovation Award."
+      zh: "實驗室獲得第 17 屆國家新創獎。"

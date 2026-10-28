@@ -1,0 +1,50 @@
+meta:
+  title:
+    en: "Nanomedicine & Stem Cell Engineering Lab | NTHU"
+    zh: "奈米醫藥與幹細胞工程實驗室｜清華大學"
+hero:
+  kicker:
+    en: "National Tsing Hua University · Hsinchu, Taiwan"
+    zh: "國立清華大學 · 生醫工程與環境科學系"
+  tagline:
+    en: "We engineer nanomaterials and stem cells to deliver genes and drugs, treat cancer, and support tissue repair."
+    zh: "我們設計奈米材料、改造幹細胞，用來遞送基因與藥物、治療癌症，也幫助組織修復。"
+  recruiting:
+    en: "Recruiting international MS and PhD students, TEEP interns, and exchange students"
+    zh: "招收專題生、碩士生、博士生，也有研究助理與博後職缺"
+  primary: {en: "Join Us", zh: "加入我們"}
+  secondary: {en: "Our research", zh: "研究主題"}
+themes_heading: {en: "What we work on", zh: "研究主題"}
+themes_more: {en: "Read more", zh: "看更多"}
+why:
+  heading: {en: "Why train with us", zh: "在這裡你會學到什麼"}
+  points:
+    - title: {en: "Hands-on, interdisciplinary training", zh: "跨領域的實作訓練"}
+      text:
+        en: "Learn polymer and nanoparticle synthesis, non-viral gene delivery, stem cell culture, and animal disease models in one lab."
+        zh: "在同一個實驗室學高分子與奈米粒子合成、非病毒基因遞送、幹細胞培養與動物疾病模式。"
+    - title: {en: "An international lab", zh: "國際化的環境"}
+      text:
+        en: "We run TEEP research programs for international interns and have hosted an exchange student from HCMUT in Vietnam. Our department is listed as an English-taught program on NTHU's international admission website."
+        zh: "實驗室執行 TEEP 國際實習計畫，也接待過越南 HCMUT 的交換生。醫環系在清大國際生入學網站上列為英語授課學程。"
+    - title: {en: "Recognized work", zh: "研究成果獲獎"}
+      text:
+        en: "Our work received the National Innovation Award (2020), the National Innovation Excellence Award (2022), the Future Tech Award (2021, 2023), and the Prof. Chau-Jen Lee Research Scholar Award (2026)."
+        zh: "研究成果獲得國家新創獎（2020）、國家新創精進獎（2022）、未來科技獎（2021、2023），以及李昭仁教授生醫工程研究學者獎（2026）。"
+papers:   # 首頁的精選論文小區塊：自動放最新 3 篇精選論文（標題、期刊、示意圖取自 publications.yaml）
+  heading: {en: "Selected papers", zh: "精選論文"}
+  more: {en: "All publications", zh: "全部論文"}
+pi:   # 「認識張老師」：照片取自 people.yaml 的 pi.photo_sm，簡介這句話改這裡
+  heading: {en: "Meet Prof. Chang", zh: "認識張老師"}
+  text:
+    en: "Chien-Wen (Jeff) Chang is a Professor and the Chair of the Department of Biomedical Engineering and Environmental Sciences at NTHU. He received his PhD from the University of Utah and did postdoctoral research at UC San Diego and UCLA. His research covers drug and gene delivery and stem cell engineering."
+    zh: "張建文教授現任國立清華大學生醫工程與環境科學系教授兼系主任。他在美國猶他大學取得博士學位，之後在加州大學聖地牙哥分校與洛杉磯分校做博士後研究，研究方向包括藥物與基因遞送、幹細胞工程。"
+  more: {en: "More about Prof. Chang", zh: "看張老師的簡介"}
+news_heading: {en: "Latest news", zh: "最新消息"}
+news_more: {en: "All news", zh: "所有消息"}
+cta:
+  heading: {en: "Interested in joining?", zh: "有興趣加入？"}
+  text:
+    en: "See who we are looking for, how students are funded, and how to apply."
+    zh: "看看我們在找什麼樣的學生、怎麼聯絡、要準備哪些資料。"
+  button: {en: "Join Us", zh: "加入我們"}

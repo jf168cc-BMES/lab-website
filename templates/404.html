@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% set meta_title = "Page not found | " ~ (site.lab_name | plain) %}
+{% set meta_desc = site.description | plain %}
+{% block content %}
+<section class="page-head">
+  <div class="container narrow">
+    <h1>Page not found</h1>
+    <p class="lead">The page you are looking for does not exist. <span lang="zh-Hant">找不到這個頁面。</span></p>
+    <p class="hero-actions">
+      <a class="btn btn-primary" href="{{ url('') }}">Home</a>
+      <a class="btn btn-outline" href="{{ url('zh/') }}" lang="zh-Hant">中文首頁</a>
+    </p>
+  </div>
+</section>
+{% endblock %}

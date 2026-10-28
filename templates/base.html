@@ -1,0 +1,101 @@
+{% import "_macros.html" as m %}
+<!DOCTYPE html>
+<html lang="{{ 'zh-Hant-TW' if lang == 'zh' else 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ meta_title }}</title>
+  <meta name="description" content="{{ meta_desc }}">
+  {% if site.noindex %}
+  <meta name="robots" content="noindex, nofollow">
+  {% endif %}
+  {% if base_url and key != '404' %}
+  <link rel="canonical" href="{{ base_url }}/{{ page_href(lang, key) }}">
+  <link rel="alternate" hreflang="en" href="{{ base_url }}/{{ page_href('en', key) }}">
+  <link rel="alternate" hreflang="zh-Hant" href="{{ base_url }}/{{ page_href('zh', key) }}">
+  {% endif %}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ meta_title }}">
+  <meta property="og:description" content="{{ meta_desc }}">
+  <meta property="og:image" content="{{ (base_url ~ '/' ~ site.og_image) if base_url else url(site.og_image) }}">
+  <meta property="og:locale" content="{{ 'zh_TW' if lang == 'zh' else 'en_US' }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#15305c">
+  <link rel="icon" href="{{ url('static/img/favicon.svg') }}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  {% if lang == 'zh' and zh_font %}
+  {# 中文字型子集（static/fonts/）：只有中文頁用到，英文頁不載入 #}
+  <link rel="preload" href="{{ url('static/fonts/NotoSansTC-subset.woff') }}" as="font" type="font/woff" crossorigin>
+  {% endif %}
+  {% block head_extra %}{% endblock %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="{{ url('static/css/style.css') }}">
+</head>
+<body id="top" class="lang-{{ lang }} page-{{ key }}">
+<a class="skip-link" href="#main">{{ '跳到主要內容' if lang == 'zh' else 'Skip to content' }}</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ href('home') }}">
+      <span class="brand-mark">{{ m.svg('logo') }}</span>
+      <span class="brand-text">
+        <span class="brand-name">{% if lang == 'zh' %}{% for part in (site.lab_name | t).split('{wbr}') %}<span class="nb">{{ part | plain }}</span>{% endfor %}{% else %}{{ site.lab_name | plain }}{% endif %}</span>
+        <span class="brand-sub">{{ site.pi_line | t }}</span>
+      </span>
+    </a>
+    {# 選單收起來的寬度（1180px 以下）：「加入我們」留在標題列、貼著漢堡鈕，不必先點開選單 #}
+    <a class="btn btn-join header-join{% if key == 'join' %} is-active{% endif %}" href="{{ href('join') }}">{{ site.join_label | t }}</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">{{ '選單' if lang == 'zh' else 'Menu' }}</span>
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="{{ '主選單' if lang == 'zh' else 'Main' }}">
+      <ul>
+        {% for item in site.nav %}
+        <li><a href="{{ href(item.key) }}"{% if key == item.key %} aria-current="page"{% endif %}>{{ item.label | t }}</a></li>
+        {% endfor %}
+      </ul>
+      <a class="lang-switch" href="{{ alt_href }}" hreflang="{{ 'en' if lang == 'zh' else 'zh-Hant' }}" lang="{{ 'en' if lang == 'zh' else 'zh-Hant' }}">{{ site.lang_switch | t }}</a>
+      <a class="btn btn-join nav-join{% if key == 'join' %} is-active{% endif %}" href="{{ href('join') }}">{{ site.join_label | t }}</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+{% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-about">
+      <p class="footer-name">{{ site.lab_name | plain }}</p>
+      <p class="footer-addr">
+        <a href="{{ site.links.department | t }}" rel="noopener">{{ site.department | t }}</a>
+        <a href="{{ site.links.nthu }}" rel="noopener">{{ site.university | t }}</a>
+        <span>{{ site.address | t }}</span>
+      </p>
+    </div>
+    <nav class="footer-nav" aria-label="{{ '頁尾選單' if lang == 'zh' else 'Footer' }}">
+      <ul>
+        {% for item in site.nav %}
+        <li><a href="{{ href(item.key) }}">{{ item.label | t }}</a></li>
+        {% endfor %}
+        <li><a href="{{ href('join') }}">{{ site.join_label | t }}</a></li>
+      </ul>
+    </nav>
+    <div class="footer-contact">
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a><br><a href="tel:{{ site.phone_tel }}">{{ site.phone | t }}</a></p>
+      <p class="footer-links">
+        <a href="{{ site.links.google_scholar }}" rel="noopener">Google Scholar</a>
+        <a href="{{ site.links.orcid }}" rel="noopener">ORCID</a>
+        <a href="{{ site.links.researchgate }}" rel="noopener">ResearchGate</a>
+      </p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>{{ site.footer_note | t }}{{ '：' if lang == 'zh' else ': ' }}{{ updated }} · © {{ updated[:4] }} {{ site.lab_name | plain }}</p>
+  </div>
+</footer>
+<script src="{{ url('static/js/main.js') }}" defer></script>
+</body>
+</html>

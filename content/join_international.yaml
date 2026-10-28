@@ -1,0 +1,112 @@
+# 國際生招生頁（只有英文）。金額與日期每學期要對官方頁核對一次。
+meta:
+  title: {en: "Join Us | Nanomedicine & Stem Cell Engineering Lab"}
+  description: {en: "How to join the Nanomedicine & Stem Cell Engineering Lab at National Tsing Hua University, Taiwan: positions, funding, key dates, and how to apply."}
+heading: {en: "Join Us"}
+intro: {en: "We welcome motivated students from around the world. This page explains who we are looking for, how students are funded, and how to apply."}
+domestic_note: {en: "台灣學生請看「[加入我們](../zh/join/)」（中文）。"}
+updated_label: {en: "Last updated"}
+toc:
+  - {id: positions, label: {en: "Positions"}}
+  - {id: funding, label: {en: "Funding"}}
+  - {id: apply, label: {en: "How to apply"}}
+  - {id: dates, label: {en: "Key dates"}}
+  - {id: life, label: {en: "Living in Hsinchu"}}
+  - {id: faq, label: {en: "FAQ"}}
+positions:
+  heading: {en: "Who we are looking for"}
+  note: {en: "We are recruiting in all four categories below."}
+  entries:
+    - title: {en: "MS students"}
+      text: {en: "Master's degree in the Department of Biomedical Engineering and Environmental Sciences."}
+    - title: {en: "PhD students"}
+      text: {en: "Doctoral degree in the same department, working on one of our research themes."}
+    - title: {en: "TEEP interns"}
+      text: {en: "Research stays of up to six months under Taiwan's TEEP program, funded by the Ministry of Education."}
+    - title: {en: "Exchange and visiting students"}
+      text: {en: "Students from NTHU partner universities, including VNUHCM University of Science and other partners in Vietnam."}
+  background_heading: {en: "Backgrounds we welcome"}
+  background: {en: "Chemistry, chemical engineering, materials science, pharmacy, and biomedical engineering. Coursework in polymers, colloids, or pharmaceutics is a plus."}
+  themes_heading: {en: "What you will work on"}
+funding:
+  heading: {en: "Funding"}
+  intro: {en: "International degree students can apply for the scholarships below. Details and eligibility are on each official page."}
+  entries:
+    - name: {en: "NTHU International Student Scholarship"}
+      text: {en: "Tuition and credit fees are waived. Apply by checking the scholarship option in the NTHU admission system."}
+      url: "https://apply.nthu.edu.tw/en/article/102-nthu-scholarship"
+    - name: {en: "Taiwan Scholarship (Ministry of Education)"}
+      text: {en: "Apply through Taiwan's representative office in your country. It cannot be combined with the NTHU International Student Scholarship."}
+      url: "https://taiwanscholarship.moe.gov.tw/web/index.aspx"
+    - name: {en: "Elite Scholarship for University Lecturers from South and Southeast Asia"}
+      text: {en: "For degree applicants who are current university lecturers or professors, including those in Vietnam. Three years for PhD and two years for MS students, reviewed every year; the third year requires a GPA of at least 3.4 in the previous year. Apply with a CV and an employment certificate. Tuition and credit fees are not covered."}
+      url: "https://apply.nthu.edu.tw/en/article/103-taiwan-government"
+    - name: {en: "TEEP stipend"}
+      text: {en: "TEEP interns receive a monthly stipend under the Ministry of Education's TEEP rules."}
+      url: "https://teep.studyintaiwan.org/program/1531"
+apply:
+  heading: {en: "How to apply"}
+  steps:
+    - {en: "**Email us first.** Use the subject line below, attach your CV and transcripts, and tell us in one paragraph which research theme interests you and why."}
+    - {en: "**Apply to our department** through the NTHU international admission system at [apply.nthu.edu.tw](https://apply.nthu.edu.tw/). Please email Prof. Chang before you apply. The lab cannot admit students directly."}
+    - {en: "**Apply for scholarships at the same time.** The NTHU scholarship is part of the admission application. The Taiwan Scholarship is applied for separately through Taiwan's office in your country."}
+    - {en: "**For TEEP**, see [our program page](https://teep.studyintaiwan.org/program/1531) and send Prof. Chang your CV, a one-page statement of your study objectives and planned dates, proof of academic qualifications, and contact details for two references, at least one month before your planned start. A video interview may follow."}
+  email_heading: {en: "Email format"}
+  mail_subject: {en: "[MS / PhD / TEEP] Your name – Research theme"}   # 「Email Prof. Chang」按鈕的主旨，與下面 email_lines 第一行相同
+  email_lines:
+    - "Subject: [MS / PhD / TEEP] Your name – Research theme"
+    - "Attach: CV and transcripts"
+    - "Body: one paragraph on which project interests you and why"
+dates:
+  heading: {en: "Key dates"}
+  entries:
+    - label: {en: "Fall intake (graduate)"}
+      text: {en: "Applications usually open in mid-December and close at the end of February. The Fall 2027 schedule has not been announced yet."}
+    - label: {en: "Spring intake"}
+      text: {en: "Applications usually run from early August to the end of September."}
+    - label: {en: "TEEP 2026"}
+      text: {en: "Applications for the 2026 program are open until November 30, 2026, and the program period ends on December 31, 2026. We have applied for a 2027 program; dates will be announced after approval."}   # Jeff 2026-10-28：2027 年度已送件，等通知
+    - label: {en: "Taiwan Scholarship (Vietnam)"}
+      text: {en: "The Ho Chi Minh City office accepted 2026 applications from February 1 to March 31. The 2027 call has not been announced yet."}
+  link_label: {en: "NTHU application timeline"}
+  link: "https://apply.nthu.edu.tw/en/article/70-international-students"
+life:
+  heading: {en: "Living in Hsinchu"}
+  entries:
+    - title: {en: "Language"}
+      text: {en: "Our department is listed as an English-taught program at NTHU. Lab meetings and presentations are in English, and both English and Chinese are used day to day. You can also take Chinese courses at the [NTHU Chinese Language Center](https://clc.site.nthu.edu.tw/)."}
+    - title: {en: "Arrival"}
+      text: {en: "Airport transport, residence permit (ARC), health insurance, and bank accounts are explained on the [NTHU Campus Life page](https://oga.site.nthu.edu.tw/p/412-1524-18665.php?Lang=en)."}
+    - title: {en: "Housing"}
+      text: {en: "Dormitories are managed by the [NTHU Division of Student Housing](https://sthousing.site.nthu.edu.tw/index.php?Lang=en). For new international graduate students, the department applies for summer housing on your behalf."}
+    - title: {en: "Tuition"}
+      text: {en: "Tuition and fees for international students are listed on [NTHU's admission website](https://apply.nthu.edu.tw/en/article/146-tuition-fees). The NTHU International Student Scholarship waives tuition and credit fees."}
+    - title: {en: "Questions in Vietnamese"}
+      text: {en: "NTHU offers [online consultation in Vietnamese and English](https://apply.nthu.edu.tw/en/article/82-malaysian%2C-vietnamese%2C-indonesian) on Mondays, 14:00–17:00 (Taiwan time), during the semester."}
+faq:
+  heading: {en: "FAQ"}
+  entries:
+    - q: {en: "Do I need to speak Chinese?"}
+      a: {en: "Our department is listed as an English-taught program, so Chinese is not required for your degree courses, and our lab meetings are held in English. If you want to learn Chinese, NTHU's Chinese Language Center offers courses."}
+    - q: {en: "Can I start as a TEEP intern and apply for a degree later?"}
+      a: {en: "Yes. TEEP is designed to introduce international students to Taiwan's research environment and encourage further study in Taiwan. Degree admission still goes through NTHU's regular application."}
+    - q: {en: "How long does the funding last?"}
+      a: {en: "The NTHU International Student Scholarship lasts up to two years for MS students and up to five years for PhD students. It continues each year after a renewal review, and PhD students reapply in their fifth year. The Taiwan Scholarship covers up to two years for a master's degree and four years for a PhD."}
+    - q: {en: "How much will my studies cost?"}
+      a: {en: "Tuition and fees are listed on NTHU's admission website. If you receive the NTHU International Student Scholarship, tuition and credit fees are waived."}
+    - q: {en: "What do graduates go on to do?"}
+      a: {en: ""}   # 先留白（Jeff 2026-10-28）：校友去向，問到本人、拿到書面同意後補上；問題照樣顯示
+voices:
+  heading: {en: "From our international members"}
+  note: {en: ""}   # 先留白（Jeff 2026-10-28）：一兩位國際成員的心得，本人書面同意後補上；標題照樣顯示
+links:
+  heading: {en: "Official links"}
+  entries:
+    - {label: {en: "NTHU international admission"}, url: "https://apply.nthu.edu.tw/"}
+    - {label: {en: "Eligibility"}, url: "https://apply.nthu.edu.tw/en/article/94-eligibility"}
+    - {label: {en: "Our department on the admission site"}, url: "https://apply.nthu.edu.tw/en/department/37-biomedical-engineering-and-environmental-sciences"}
+    - {label: {en: "Taiwan government scholarships"}, url: "https://apply.nthu.edu.tw/en/article/103-taiwan-government"}
+    - {label: {en: "Taiwan Scholarship office in Ho Chi Minh City"}, url: "https://www.roc-taiwan.org/vnsgn_vi/post/10196.html"}
+    - {label: {en: "Taiwan Scholarship notices for northern Vietnam (Hanoi)"}, url: "https://depart.moe.edu.tw/VN/News2.aspx?n=52EBA08E597C8699&sms=BB49DCCE0919D766"}
+    - {label: {en: "NTHU short-term research (TEEP, IIPP)"}, url: "https://www.oga.nthu.edu.tw/TabContentView/40"}
+    - {label: {en: "NTHU partner universities"}, url: "https://oga.site.nthu.edu.tw/p/412-1524-17820.php?Lang=en"}

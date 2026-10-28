@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% set meta_title = page.meta.title | plain %}
+{% set meta_desc = site.description | plain %}
+{% block content %}
+<section class="page-head">
+  <div class="container">
+    <h1>{{ page.heading | t }}</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container narrow">
+    <ul class="news-list full">
+      {% for n in news_items %}
+      <li class="news-item">
+        <time class="news-date">{{ n.date_label }}</time>
+        <div>
+          <h2>{{ n.title | tx }}</h2>
+          <p>{{ n.text | tx }}</p>
+          {% if n.doi %}<a class="card-link" href="https://doi.org/{{ n.doi }}" rel="noopener">DOI: {{ n.doi }}</a>{% endif %}
+          {% if n.link %}<a class="card-link" href="{{ n.link }}" rel="noopener">{{ page.more_label | t }} <span aria-hidden="true">→</span></a>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,83 @@
+# 研究主題。每個主題的圖是 static/img/research/{id}-sm.webp 與 {id}.webp（tools/pub_images.py 產生），有圖就取代主題的小圖示。
+meta:
+  title:
+    en: "Research | Nanomedicine & Stem Cell Engineering Lab"
+    zh: "研究｜奈米醫藥與幹細胞工程實驗室"
+heading: {en: "Research", zh: "研究"}
+intro:
+  en: "Our lab works where nanomaterials meet stem cell engineering. We design non-viral carriers that deliver genes into stem cells, use stem cells and nanomaterials against cancer, and build 3D culture systems and injectable matrices that improve cell therapy."
+  zh: "實驗室的研究橫跨奈米材料與幹細胞工程。我們設計非病毒載體，把基因送進幹細胞；用幹細胞與奈米材料治療癌症；也建立 3D 培養系統與可注射基質，提高細胞治療的效果。"
+learn_label: {en: "What students learn", zh: "學生會學到"}
+themes:
+  - id: gene-delivery
+    icon: gene
+    title:
+      en: "Non-viral gene delivery"
+      zh: "非病毒基因遞送"
+    short:
+      en: "Magnetic nanocomplexes and lipid carriers that deliver genes into stem cells and cancer cells."
+      zh: "用磁性奈米複合物與脂質載體，把基因送進幹細胞與癌細胞。"
+    body:
+      en: "Viral vectors raise safety and cost concerns in gene therapy. We develop non-viral carriers, including magnetic ternary nanohybrids (MTNs), lipid vesicles, and lipid nanoparticles (LNPs), to deliver genes into stem cells and cancer cells. Engineered stem cells can express therapeutic proteins such as VEGF for therapeutic angiogenesis, TRAIL for cancer therapy, SOX9 for chondrogenic differentiation, and IL-12 for immunotherapy. Our MPGene technology, built on MTNs, is used to engineer VEGF-expressing human mesenchymal stem cells."
+      zh: "病毒載體在基因治療上有安全與成本的顧慮。我們開發非病毒載體，包括磁性三元奈米混成物（MTNs）、脂質囊泡與脂質奈米粒子（LNPs），把基因送進幹細胞與癌細胞。改造後的幹細胞可以表現 VEGF（促進血管新生）、TRAIL（癌症治療）、SOX9（軟骨分化）與 IL-12（增強免疫治療）等治療用蛋白質；我們以 MTNs 為基礎的 MPGene 技術，就用來製作表現 VEGF 的人類間質幹細胞。"
+    learn:
+      - {en: "Non-viral gene carriers (MTNs, LNPs)", zh: "非病毒基因載體（MTNs、LNPs）"}
+      - {en: "Stem cell culture (ADSCs, MSCs)", zh: "幹細胞培養（脂肪幹細胞、間質幹細胞）"}
+      - {en: "Transfection of stem cells and cancer cells", zh: "幹細胞與癌細胞的轉染"}
+  - id: cancer-therapy
+    icon: light
+    title:
+      en: "Nanomaterials for photoactivated cancer therapy"
+      zh: "光活化癌症治療的奈米材料"
+    short:
+      en: "Gold nanorods and photosensitizer nanocomplexes that turn light into heat or reactive oxygen species inside tumors."
+      zh: "金奈米棒與光敏劑奈米複合物，在腫瘤裡把光轉成熱或活性氧。"
+    body:
+      en: "Photothermal therapy uses agents that convert light into local heat to kill cancer cells, and may cause fewer side effects in normal tissue than conventional treatments. We design gold nanorods and photosensitizer-loaded nanocomplexes, and use tumor-homing stem cells as carriers to bring them into tumors for combined photothermal and photodynamic therapy."
+      zh: "光熱治療用光熱轉換劑把光變成局部高溫，殺死癌細胞；和傳統治療相比，對正常組織的副作用可能較少。我們設計金奈米棒與載有光敏劑的奈米複合物，再利用會往腫瘤移動的幹細胞當載體，把它們帶進腫瘤，同時進行光熱與光動力治療。"
+    learn:
+      - {en: "Gold nanorod synthesis and surface modification", zh: "金奈米棒合成與表面修飾"}
+      - {en: "Photothermal and photodynamic treatment in cells and animals", zh: "細胞與動物的光熱、光動力治療"}
+      - {en: "Tumor models, including triple-negative breast cancer (TNBC)", zh: "腫瘤動物模式，包括三陰性乳癌（TNBC）"}
+  - id: stem-cell-3d
+    icon: spheroid
+    title:
+      en: "3D stem cell culture and injectable matrices"
+      zh: "3D 幹細胞培養與可注射基質"
+    short:
+      en: "Spheroids, microgels, and injectable hydrogels that keep transplanted stem cells alive and active."
+      zh: "用細胞球體、微凝膠與可注射水凝膠，讓移植的幹細胞存活並發揮作用。"
+    body:
+      en: "Transplanted stem cells often lose viability in the harsh environment of an injury, which limits their therapeutic effect. We build 3D culture systems, including hanging-drop spheroids and microfluidic microgels, and injectable self-healing matrices that protect cells during delivery. In our recent work, hanging-drop culture reshaped the mesenchymal stem cell transcriptome, enhanced chemotaxis, and helped the cells pass through the lungs after intravenous injection. Applications include vascularized adipose tissue, nerve regeneration, and spinal cord injury."
+      zh: "移植到受損部位的幹細胞，常因為環境惡劣而存活率下降；治療效果因此受限。我們建立 3D 培養系統，包括懸滴培養的細胞球體、用微流道製作的微凝膠，以及在注射過程中保護細胞的可注射自癒合基質。最近的研究發現，懸滴培養會改變間質幹細胞的轉錄體，提升趨化能力，也減少靜脈注射後滯留在肺部的情形。應用包括血管化脂肪組織、神經再生與脊髓損傷。"
+    learn:
+      - {en: "3D spheroid culture and microfluidics", zh: "3D 細胞球體培養與微流道"}
+      - {en: "Hydrogels and extracellular matrix", zh: "水凝膠與細胞外基質"}
+      - {en: "3D bioprinting", zh: "3D 生物列印"}
+  - id: nano-sensors
+    icon: sensor
+    title:
+      en: "Nano-sensors for cancer cell isolation"
+      zh: "分離癌細胞的奈米感測器"
+    short:
+      en: "Biodegradable nano-sensors carrying molecular beacons that find and isolate drug-resistant cancer cells."
+      zh: "攜帶分子信標的可降解奈米感測器，用來找出並分離抗藥性癌細胞。"
+    body:
+      en: "Multidrug resistance remains a major challenge in cancer therapy, and cancer cells with inherent resistance are hard to identify. We designed a lipid/PLGA core-shell nanoparticle that delivers molecular beacons into living cells to image MDR1 mRNA. Cells with high MDR1 expression light up and can then be isolated by fluorescence-activated cell sorting (FACS) for further study."
+      zh: "多重抗藥性是癌症治療的一大難題，先天就具抗藥性的癌細胞尤其不容易辨認。我們設計脂質／PLGA 核殼奈米粒子，把分子信標送進活細胞，偵測 MDR1 mRNA。MDR1 表現高的細胞會發出螢光，再用流式細胞分選（FACS）分離出來，進一步研究。"
+    learn:
+      - {en: "Nanoparticle formulation (lipid/PLGA core-shell)", zh: "奈米粒子配方（脂質／PLGA 核殼結構）"}
+      - {en: "Molecular beacons for live-cell mRNA imaging", zh: "用分子信標做活細胞 mRNA 影像"}
+      - {en: "Flow cytometry and cell sorting", zh: "流式細胞儀與細胞分選"}
+techniques_heading: {en: "Techniques in the lab", zh: "實驗室的技術"}
+techniques:
+  - title: {en: "Stem cells", zh: "幹細胞"}
+    text: {en: "Adipose-derived stem cells (ADSCs), mesenchymal stem cells (MSCs), 3D culture", zh: "脂肪幹細胞（ADSCs）、間質幹細胞（MSCs）、3D 培養"}
+  - title: {en: "Non-viral gene delivery", zh: "非病毒基因遞送"}
+    text: {en: "Magnetic ternary nanohybrids (MTNs), lipid nanoparticles (LNPs)", zh: "磁性三元奈米混成物（MTNs）、脂質奈米粒子（LNPs）"}
+  - title: {en: "Biomaterials", zh: "生醫材料"}
+    text: {en: "Microfluidic systems, hydrogels, extracellular matrix", zh: "微流道系統、水凝膠、細胞外基質"}
+  - title: {en: "Nanoparticles", zh: "奈米粒子"}
+    text: {en: "Gold nanorods, boron-10 agents for boron neutron capture therapy (BNCT)", zh: "金奈米棒、硼中子捕獲治療（BNCT）用的硼-10 藥物"}
+  - title: {en: "Animal models", zh: "動物疾病模式"}
+    text: {en: "Triple-negative breast cancer (TNBC), post-surgical models, hyperbaric oxygen therapy (HBOT) toxicity", zh: "三陰性乳癌（TNBC）、術後模式、高壓氧治療（HBOT）毒性"}

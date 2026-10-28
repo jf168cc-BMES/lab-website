@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% set meta_title = page.meta.title | plain %}
+{% set meta_desc = page.meta.description | plain %}
+{% block content %}
+<section class="page-head join-head">
+  <div class="container">
+    <h1>{{ page.heading | t }}</h1>
+    <p class="lead">{{ page.intro | mdi }} <span lang="en">{{ page.intro_en | mdi }}</span></p>
+    <p class="head-actions">
+      <a class="btn btn-primary" href="{{ mailto(site.email, page.contact.mail_subject | t) }}">{{ m.svg('mail') }}{{ site.email_button | t }}</a>
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">{{ page.positions.heading | t }}</h2>
+    <div class="cards cards-3">
+      {% for p in page.positions.entries %}
+      <article class="card">
+        <h3>{{ p.title | tx }}</h3>
+        <p>{{ p.text | tx }}</p>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="spaced-p">{{ page.positions.background | tx }}</p>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <h2 class="section-title">{{ page.learn_heading | t }}</h2>
+    <div class="cards cards-3">
+      {% for tq in research.techniques %}
+      <article class="card tech-card">
+        <h3>{{ tq.title | tx }}</h3>
+        <p>{{ tq.text | tx }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container two-col">
+    <div>
+      <h2 class="section-title">{{ page.contact.heading | t }}</h2>
+      <p>{{ page.contact.text | mdi }}</p>
+      {% if page.contact.response %}<p class="note">{{ page.contact.response | tx }}</p>{% endif %}
+    </div>
+    <div>
+      <h2 class="section-title">{{ page.careers.heading | t }}</h2>
+      {% set careers_text = page.careers.text | tx %}
+      {% if careers_text %}<p class="placeholder">{{ careers_text }}</p>{% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <h2 class="section-title">{{ page.dates.heading | t }}</h2>
+    <p>{{ page.dates.text | tx }}</p>
+    <ul class="link-grid">
+      {% for l in page.dates.entries %}<li><a href="{{ l.url }}" rel="noopener">{{ l.label | t }}</a></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock %}
