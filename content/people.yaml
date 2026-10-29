@@ -113,7 +113,7 @@ alumni_groups:
       - {name: "Chun-Yu Lin"}
       - {name: "Chia-Hsuan Yeh"}
       - {name: "Ting-Yu Tu", now: {en: "Researcher, Scinopharm", zh: "台灣神隆（Scinopharm）研究員"}}
-      - {name: "Yu-Chen Huang", now: {en: "Staff, Pharmaceutical Industry", zh: "任職於製藥業"}}
+      - {name: "Yu-Chen Huang", now: {en: "Researcher", zh: "研究員"}}
       - {name: "Cheng-Wei Lu", now: {en: "Engineer", zh: "工程師"}}
       - {name: "Pei-Ying Lai", now: {en: "Engineer, ASML", zh: "艾司摩爾（ASML）工程師"}}
       - {name: "Chih-Chi Cheng", now: {en: "Engineer, TSMC", zh: "台積電（TSMC）工程師"}}
