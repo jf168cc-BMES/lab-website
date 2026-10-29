@@ -111,12 +111,12 @@ alumni_groups:
       - {name: "I-Hsuan Yang", now: {en: "Assistant Professor, SYSU", zh: "SYSU 助理教授"}}
       - {name: "Liang-Wen Liao", now: {en: "Engineer, TSMC", zh: "台積電（TSMC）工程師"}}
       - {name: "Wei-Chen Wei"}
-      - {name: "Yi-Yia Wang"}
+      - {name: "Yi-Yia Wang", now: {en: "Engineer, Hsinchu Science Park", zh: "新竹科學園區工程師"}}
       # 更早期的專題生（Jeff 2026-10-29 新增）。Yu-Yun Jang、Rih-Yang Huang、Yi-Hsien Lin 也在碩博士組，Jeff 說兩邊都列。
       # 英文名：Yu-Chen Huang、Chih-Chi Cheng、Pei-Ying Lai、Wei-Chen Hsiao 取自論文署名（Crossref）；
       # Chun-Yu Lin、Chia-Hsuan Yeh、Ting-Yu Tu、Cheng-Wei Lu、Ying-Ying Lin、Ming-Hui Chen 是威妥瑪拼音推的，本人拼法不同再改。
       - {name: "Yu-Yun Jang", now: {en: "Engineer, TSMC", zh: "台積電（TSMC）工程師"}}
-      - {name: "Chun-Yu Lin"}
+      - {name: "Chun-Yu Lin", now: {en: "Researcher, Biotech Industry, Canada", zh: "生技業研究員（加拿大）"}}
       - {name: "Chia-Hsuan Yeh"}
       - {name: "Ting-Yu Tu", now: {en: "Researcher, Scinopharm", zh: "台灣神隆（Scinopharm）研究員"}}
       - {name: "Yu-Chen Huang", now: {en: "Researcher", zh: "研究員"}}
