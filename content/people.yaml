@@ -106,6 +106,9 @@ alumni_groups:
       - {name: "Yi-Yia Wang"}
   - heading: {en: "International exchange students", zh: "國際交換生"}
     people:
+      - {name: "Suji Boovendhiran", now: {en: "India · 2026/08–2026/10", zh: "印度 · 2026/08–2026/10"}}
+      - {name: "Le Hoang Phuong Khanh", now: {en: "Vietnam · 2026/07–2026/09", zh: "越南 · 2026/07–2026/09"}}
+      - {name: "Nguyen Pham Thanh Mai", now: {en: "Vietnam · 2026/06–2026/08", zh: "越南 · 2026/06–2026/08"}}
       - {name: "Pallavi", now: {en: "India · 2024/08–2024/12", zh: "印度 · 2024/08–2024/12"}}
       - {name: "Do Bao Tran", now: {en: "Vietnam · 2024/07–2024/09", zh: "越南 · 2024/07–2024/09"}}
       - {name: "Kimi Mackenzie Wibowo", now: {en: "Indonesia · 2024/07–2024/08", zh: "印尼 · 2024/07–2024/08"}}
