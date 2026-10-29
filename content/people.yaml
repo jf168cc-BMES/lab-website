@@ -85,8 +85,8 @@ alumni_groups:
     people:
       - {name: "Chieh-An Tsai"}
       - {name: "Zhe-Kai Lu"}
-      - {name: "Chia-Ming Cheng", now: {en: "Studying at NTU", zh: "就讀臺灣大學（NTU）"}}
-      - {name: "Rui-Jun Liu", now: {en: "Studying at NTHU", zh: "就讀清華大學"}}
+      - {name: "Chia-Ming Cheng"}
+      - {name: "Rui-Jun Liu"}
       - {name: "Ji-Min Kim", now: {en: "Studying at KIST", zh: "就讀 KIST"}}
       - {name: "Allexandra Elizabeth Audrea"}
       - {name: "Yen-Chi Chang", now: {en: "Studying at NYCU", zh: "就讀陽明交通大學"}}
