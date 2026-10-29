@@ -65,12 +65,13 @@ Windows 的終端機若印中文出錯，改用 `python -X utf8 build.py`。預�
 
 **Windows 桌面捷徑**：`python tools/preview.py --shortcut` 會在桌面建「實驗室網站預覽」。雙擊就打開瀏覽器；預覽用 pythonw 在背景跑、不開視窗，到登出或關機才停，預覽在跑時再雙擊只會多開一個分頁。啟動紀錄與錯誤寫在暫存資料夾的 `lab-website-preview.log`。捷徑用的圖示 `tools/preview.ico` 在本機產生，不進 git。
 
-## 上線（還沒做）
+## 上線（2026-10-29 起）
 
-1. 在 GitHub 建公開儲存庫，推上 `main`。Settings → Pages → Deploy from a branch → `main` 的 `/docs`。
-2. 網址：先在 GitHub 帳號 Settings → Pages 驗證網域 `nmse.bmes.nthu.edu.tw`（2026-10-26 已加入，等 TXT 紀錄生效後按 Verify），系網管同時把子網域設成 CNAME 指到 `jf168cc-bmes.github.io`。沒驗證就加 CNAME，別人可能在 GitHub 上搶用這個子網域。
-3. `content/site.yaml` 填 `custom_domain` 與 `base_url`，`noindex` 改成 `false`，重跑 `build.py`、推上去。GitHub 會自動簽 HTTPS 憑證，Settings → Pages 勾 Enforce HTTPS。填了 `base_url` 之後，`404.html` 的樣式、圖檔、連結會改用完整網址（GitHub Pages 在多層路徑的錯誤網址也回這一頁，相對網址會讓整頁沒有樣式）；沒填時維持相對網址。
-4. 上線後：系教師頁、師資列表、PMED、TEEP 計畫頁、Google Scholar 的連結全部換成新網址。
+- 網址：https://nmse.bmes.nthu.edu.tw/ 。GitHub Pages 從 `main` 的 `/docs` 發布，系上 DNS 以 CNAME 把 `nmse.bmes.nthu.edu.tw` 指到 `jf168cc-bmes.github.io`；HTTPS 憑證由 GitHub 自動申請與續約，已開「Enforce HTTPS」。
+- `content/site.yaml` 的 `custom_domain`、`base_url` 已填，`noindex: false`（搜尋引擎可以收錄，`build.py` 會產生 `sitemap.xml`）。填了 `base_url` 之後，`404.html` 的樣式、圖檔、連結用完整網址（GitHub Pages 在多層路徑的錯誤網址也回這一頁，相對網址會讓整頁沒有樣式）。
+- 更新網站：改內容 → `python build.py --check` → 提交 → 推上 `main`，Pages 約一分鐘內更新。
+- 要停用網站或換網址：先請系網管拿掉 `nmse` 那筆 CNAME，再到 GitHub 關 Pages 或改網域；反過來做，中間這個網址可能被別人拿去架站。
+- 還沒做：系教師頁、師資列表、PMED、TEEP 計畫頁、Google Scholar 的連結換成新網址。
 
 ## 注意
 

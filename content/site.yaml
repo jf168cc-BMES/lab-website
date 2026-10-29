@@ -59,4 +59,4 @@ og_image: "static/img/og-image.jpg"
 # 上線設定
 custom_domain: "nmse.bmes.nthu.edu.tw"   # Jeff 2026-10-26 定；會自動產生 docs/CNAME。2026-10-28 先在 GitHub 占住網域，再請系網管改 CNAME
 base_url: "https://nmse.bmes.nthu.edu.tw"   # 填上才會產生 sitemap 與完整的分享網址（noindex 為 true 時不產生 sitemap）
-noindex: true       # 正式公開前保持 true，避免搜尋引擎收錄；改成 false 前要 Jeff 再點頭一次
+noindex: false      # Jeff 2026-10-29 同意開放搜尋引擎收錄（改回 true 會擋下收錄並拿掉 sitemap）
