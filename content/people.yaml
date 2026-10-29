@@ -1,7 +1,8 @@
 # 成員頁（主持人在 pi.yaml）。
 # members＝現任成員：有照片的放 static/img/people/（4:5，480×600 以內，不帶 EXIF），沒有照片的寫 initials（姓名縮寫頭像）。
-# alumni_groups＝各組畢業成員與交換生；now＝現況（沒有就省略），note＝名字後面的註記。
-# 名單最初取自舊網站（nthubmeschanglab.wixsite.com/website/member，2026-10-29 讀取）；校友的現況沒有逐一核對過。
+# alumni_groups＝各組畢業成員與交換生；note＝名字後面的註記，year＝交換生的交換年份，兩者都會顯示。
+# now＝校友現職：只留在這裡備查，網頁不顯示（Jeff 2026-10-30）。注意這個 repo 是公開的，原始碼裡看得到。
+# 名單最初取自舊網站（nthubmeschanglab.wixsite.com/website/member，2026-10-29 讀取）。
 # 要加入新成員：本人同意後在 members 加一筆；成員離開就移到 alumni_groups 對應的組別。
 meta:
   title:
@@ -131,13 +132,13 @@ alumni_groups:
   - heading: {en: "International exchange students", zh: "國際交換生"}
     people:
       # 國際交換生只寫交換年份、不寫國家（Jeff 2026-10-29）
-      - {name: "Suji Boovendhiran", now: {en: "2026", zh: "2026 年"}}
-      - {name: "Le Hoang Phuong Khanh", now: {en: "2026", zh: "2026 年"}}
-      - {name: "Nguyen Pham Thanh Mai", now: {en: "2026", zh: "2026 年"}}
-      - {name: "Pallavi", now: {en: "2024", zh: "2024 年"}}
-      - {name: "Do Bao Tran", now: {en: "2024", zh: "2024 年"}}
-      - {name: "Kimi Mackenzie Wibowo", now: {en: "2024", zh: "2024 年"}}
-      - {name: "Pamela Wijaya", now: {en: "2023", zh: "2023 年"}}
+      - {name: "Suji Boovendhiran", year: {en: "2026", zh: "2026 年"}}
+      - {name: "Le Hoang Phuong Khanh", year: {en: "2026", zh: "2026 年"}}
+      - {name: "Nguyen Pham Thanh Mai", year: {en: "2026", zh: "2026 年"}}
+      - {name: "Pallavi", year: {en: "2024", zh: "2024 年"}}
+      - {name: "Do Bao Tran", year: {en: "2024", zh: "2024 年"}}
+      - {name: "Kimi Mackenzie Wibowo", year: {en: "2024", zh: "2024 年"}}
+      - {name: "Pamela Wijaya", year: {en: "2023", zh: "2023 年"}}
 join_card:
   heading: {en: "Join the group", zh: "加入我們"}
   text:

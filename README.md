@@ -28,7 +28,7 @@
 ## 常見修改
 
 - **加一則消息**：在 `content/news.yaml` 的 `items` 加一筆 `date`（`YYYY` 或 `YYYY-MM`）、`title`、`text`，可加 `doi` 或 `link`。順序不用管，會自動排。
-- **新增成員**：成員本人同意後，在 `content/people.yaml` 的 `members` 加 `name`、`role`、`topic`（選填）和 `photo`（照片放 `static/img/people/`，4:5、480×600 以內、不帶 EXIF）；沒有照片的人改寫 `initials`（姓名縮寫頭像）。成員離開就把那筆移到 `alumni_groups` 對應的組別（`now` 寫現況，沒有就省略）。同意書不要放進這個資料夾。
+- **新增成員**：成員本人同意後，在 `content/people.yaml` 的 `members` 加 `name`、`role`、`topic`（選填）和 `photo`（照片放 `static/img/people/`，4:5、480×600 以內、不帶 EXIF）；沒有照片的人改寫 `initials`（姓名縮寫頭像）。成員離開就把那筆移到 `alumni_groups` 對應的組別（`now` 寫現職，只留在檔案裡備查、網頁不顯示；交換生的交換年份寫 `year`，會顯示）。同意書不要放進這個資料夾。
 - **更新論文**：`python tools/fetch_publications.py`（從 ORCID 0000-0002-0701-876X 重抓，保留手動欄位）。精選自動是張老師為通訊作者的論文；要個別排除寫 `selected: false`，要加進別篇寫 `selected: true`。
 - **改國際生頁的金額或日期**：`content/join_international.yaml`，每學期對官方頁核對一次。
 - **「最後更新」日期**：頁尾與英文招生頁顯示的日期是 `content/site.yaml` 的 `updated`（`YYYY-MM-DD`），**不再自動用產生網站的日期**；改了網站內容後手動改這個日期。

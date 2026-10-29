@@ -424,7 +424,7 @@ img.member-photo { height: auto; min-height: 0; aspect-ratio: 4 / 5; align-self:
 .alumni-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); column-gap: 36px; }   /* 由左到右逐列排，名單順序＝閱讀順序（Jeff 10-29：Fu 要看得出是最後一位） */
 .alumni-list li { padding: 7px 0; border-bottom: 1px solid var(--line); line-height: 1.5; }
 .alumni-name { font-weight: 600; }
-.alumni-note, .alumni-now { color: var(--muted); font-size: var(--fs-sm); }
+.alumni-note, .alumni-year { color: var(--muted); font-size: var(--fs-sm); }
 
 /* ---------- Join ---------- */
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 28px; }

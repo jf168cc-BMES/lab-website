@@ -44,7 +44,7 @@
       <h3 class="small-title">{{ g.heading | t }}</h3>
       <ul class="alumni-list">
         {% for a in g.people %}
-        <li><span class="alumni-name">{{ a.name | t }}</span>{% if a.note %} <span class="alumni-note">{{ a.note | tx }}</span>{% endif %}{% if a.now %}<span class="alumni-now"> — {{ a.now | tx }}</span>{% endif %}</li>
+        <li><span class="alumni-name">{{ a.name | t }}</span>{% if a.note %} <span class="alumni-note">{{ a.note | tx }}</span>{% endif %}{% if a.year %}<span class="alumni-year"> — {{ a.year | tx }}</span>{% endif %}</li>
         {% endfor %}
       </ul>
     </div>

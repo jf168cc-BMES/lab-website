@@ -4,9 +4,9 @@
 /* 中文字型：Noto Sans TC 子集（只含網站用到的字，檔案在 static/fonts/，build.py 在原字型存在時自動更新）。
    只有中文頁用得到（英文頁的字型順序不含它）。400／500／700 三段指到同一個可變字型檔、只下載一次；
    網站裡的 600 字重會落到 700，跟之前 Google Fonts 只給 400／500／700 時的樣子一樣。 */
-@font-face { font-family: "Noto Sans TC"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/NotoSansTC-subset.woff?v=4341fe91") format("woff"); }
-@font-face { font-family: "Noto Sans TC"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/NotoSansTC-subset.woff?v=4341fe91") format("woff"); }
-@font-face { font-family: "Noto Sans TC"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/NotoSansTC-subset.woff?v=4341fe91") format("woff"); }
+@font-face { font-family: "Noto Sans TC"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/NotoSansTC-subset.woff?v=650e1ff6") format("woff"); }
+@font-face { font-family: "Noto Sans TC"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/NotoSansTC-subset.woff?v=650e1ff6") format("woff"); }
+@font-face { font-family: "Noto Sans TC"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/NotoSansTC-subset.woff?v=650e1ff6") format("woff"); }
 
 :root {
   --navy-950: #0b1830;
@@ -424,7 +424,7 @@ img.member-photo { height: auto; min-height: 0; aspect-ratio: 4 / 5; align-self:
 .alumni-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); column-gap: 36px; }   /* 由左到右逐列排，名單順序＝閱讀順序（Jeff 10-29：Fu 要看得出是最後一位） */
 .alumni-list li { padding: 7px 0; border-bottom: 1px solid var(--line); line-height: 1.5; }
 .alumni-name { font-weight: 600; }
-.alumni-note, .alumni-now { color: var(--muted); font-size: var(--fs-sm); }
+.alumni-note, .alumni-year { color: var(--muted); font-size: var(--fs-sm); }
 
 /* ---------- Join ---------- */
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 28px; }
