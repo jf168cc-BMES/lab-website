@@ -421,8 +421,8 @@ img.member-photo { height: auto; min-height: 0; aspect-ratio: 4 / 5; align-self:
 /* 畢業成員：依學位分組，名單分欄排（窄螢幕自動變一欄） */
 .alumni-block + .alumni-block { margin-top: 32px; }
 .alumni-block .small-title { margin-top: 0; }
-.alumni-list { list-style: none; margin: 0; padding: 0; columns: 3 280px; column-gap: 36px; }
-.alumni-list li { break-inside: avoid; padding: 7px 0; border-bottom: 1px solid var(--line); line-height: 1.5; }
+.alumni-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); column-gap: 36px; }   /* 由左到右逐列排，名單順序＝閱讀順序（Jeff 10-29：Fu 要看得出是最後一位） */
+.alumni-list li { padding: 7px 0; border-bottom: 1px solid var(--line); line-height: 1.5; }
 .alumni-name { font-weight: 600; }
 .alumni-note, .alumni-now { color: var(--muted); font-size: var(--fs-sm); }
 
