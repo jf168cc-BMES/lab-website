@@ -452,6 +452,7 @@ items:
   corresponding: true
   co_corresponding:
   - Lo JM
+  selected: false
 - doi: 10.1002/elps.201500154
   year: 2015
   title: 5-Methoxytryptophan-dependent inhibition of oral squamous cell carcinoma metastasis
@@ -507,7 +508,7 @@ items:
   - Chuang CC
   - Chang CW
   type: journal-article
-  selected: true
+  selected: false
 - doi: 10.2147/IJN.S75955
   year: 2015
   title: Evaluation of <sup>188</sup>Re-labeled PEGylated nanoliposome as a radionuclide therapeutic agent in an orthotopic glioma-bearing rat model
@@ -530,6 +531,7 @@ items:
   bib_fix:
     volume: '10'
     pages: 463-473
+  selected: false
 - doi: 10.1016/j.jconrel.2015.09.016
   year: 2015
   title: Monocytic delivery of therapeutic oxygen bubbles for dual-modality treatment of tumor hypoxia
@@ -582,7 +584,7 @@ items:
   - Chuang CC
   - Chang CW
   type: journal-article
-  selected: true
+  selected: false
 - doi: 10.1016/j.biomaterials.2012.10.020
   year: 2013
   title: Engineering cell-material interfaces for long-term expansion of human pluripotent stem cells
