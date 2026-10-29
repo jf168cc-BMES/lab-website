@@ -89,6 +89,7 @@ alumni_groups:
       - {name: "Rui-Jun Liu"}
       - {name: "Ji-Min Kim", now: {en: "Studying at KIST", zh: "就讀 KIST"}}
       - {name: "Allexandra Elizabeth Audrea"}
+      - {name: "Sherry Huang"}
       - {name: "Yen-Chi Chang", now: {en: "Studying at NYCU", zh: "就讀陽明交通大學"}}
       - {name: "Yuan-Ci Chou", now: {en: "Abbott, USA", zh: "任職於 Abbott（美國）"}}
       - {name: "Xi-Yu Peng", now: {en: "Engineer, TSMC", zh: "台積電（TSMC）工程師"}}
