@@ -67,7 +67,7 @@ alumni_groups:
       - {name: "Jia-Jia Hsu", note: {en: "(5-year B.S./M.S. program)", zh: "（五年學碩）"}, now: {en: "Engineer, TSMC", zh: "台積電（TSMC）工程師"}}
       - {name: "Yu-Hsien Liu", now: {en: "Engineer, TSMC", zh: "台積電（TSMC）工程師"}}
       - {name: "Jun-Chi Yang", now: {en: "Works at Reber Genetics", zh: "任職於 Reber Genetics"}}
-      - {name: "Bo-Jyun Lin", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Bo-Jyun Lin", now: {en: "Engineer, Hsinchu Science Park", zh: "新竹科學園區工程師"}}
       - {name: "Wei-Hsiang Huang", now: {en: "Engineer, TSMC", zh: "台積電（TSMC）工程師"}}
       - {name: "Chu-Yun Wang", now: {en: "Engineer, EPIStar", zh: "晶元光電（EPIStar）工程師"}}
       - {name: "Yu-Yun Jang", now: {en: "Engineer, TSMC", zh: "台積電（TSMC）工程師"}}
