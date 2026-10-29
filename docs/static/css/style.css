@@ -4,9 +4,9 @@
 /* 中文字型：Noto Sans TC 子集（只含網站用到的字，檔案在 static/fonts/，build.py 在原字型存在時自動更新）。
    只有中文頁用得到（英文頁的字型順序不含它）。400／500／700 三段指到同一個可變字型檔、只下載一次；
    網站裡的 600 字重會落到 700，跟之前 Google Fonts 只給 400／500／700 時的樣子一樣。 */
-@font-face { font-family: "Noto Sans TC"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/NotoSansTC-subset.woff?v=d1a2e638") format("woff"); }
-@font-face { font-family: "Noto Sans TC"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/NotoSansTC-subset.woff?v=d1a2e638") format("woff"); }
-@font-face { font-family: "Noto Sans TC"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/NotoSansTC-subset.woff?v=d1a2e638") format("woff"); }
+@font-face { font-family: "Noto Sans TC"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/NotoSansTC-subset.woff?v=43ddf125") format("woff"); }
+@font-face { font-family: "Noto Sans TC"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/NotoSansTC-subset.woff?v=43ddf125") format("woff"); }
+@font-face { font-family: "Noto Sans TC"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/NotoSansTC-subset.woff?v=43ddf125") format("woff"); }
 
 :root {
   --navy-950: #0b1830;
@@ -404,14 +404,18 @@ dialog.zoom img { display: block; max-width: 94vw; max-height: calc(94vh - 52px)
 .join-card h2 { margin-bottom: 0.3em; }
 .join-card p { margin: 0; max-width: var(--measure); }
 /* 成員頁：現任成員卡片（照片 4:5；沒照片的人用姓名縮寫的色塊，卡片高度才一致） */
-.member-card { padding: 0; overflow: hidden; }
-.member-photo { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; background: var(--blue-50); }
-.member-avatar { display: grid; place-items: center; font-size: 2.6rem; font-weight: 700; letter-spacing: 0.06em; color: var(--blue-700); background: linear-gradient(160deg, var(--blue-100), var(--blue-50)); }
-.member-body { padding: 16px 18px 20px; }
-.member-card h3 { margin: 0 0 0.15em; font-size: var(--fs-lg); line-height: 1.3; }
+/* 小卡片：照片在左（約 120px 寬）、文字在右；桌面一排三張、平板兩張、手機一張 */
+.member-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 960px) { .member-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .member-grid { grid-template-columns: 1fr; } }
+.member-card { padding: 0; overflow: hidden; display: grid; grid-template-columns: 120px minmax(0, 1fr); }
+.member-photo { display: block; width: 100%; height: 100%; min-height: 150px; object-fit: cover; object-position: center top; background: var(--blue-50); }
+.member-avatar { display: grid; place-items: center; font-size: 1.9rem; font-weight: 700; letter-spacing: 0.06em; color: var(--blue-700); background: linear-gradient(160deg, var(--blue-100), var(--blue-50)); }
+.member-body { align-self: center; min-width: 0; padding: 14px 16px; }
+.member-card h3 { margin: 0 0 0.15em; font-size: var(--fs-ui); line-height: 1.3; }
 .member-role { margin: 0; color: var(--blue-700); font-weight: 600; font-size: var(--fs-md); }
 .member-topic { margin: 0.5em 0 0; color: var(--muted); font-size: var(--fs-sm); line-height: 1.55; }
-@media (max-width: 640px) { .member-card { display: grid; grid-template-columns: 112px 1fr; align-items: center; } .member-body { padding: 12px 14px; } .member-avatar { font-size: 1.8rem; } }
+@media (max-width: 640px) { .member-card { grid-template-columns: 104px minmax(0, 1fr); } .member-avatar { font-size: 1.7rem; } }
 /* 畢業成員：依學位分組，名單分欄排（窄螢幕自動變一欄） */
 .alumni-block + .alumni-block { margin-top: 32px; }
 .alumni-block .small-title { margin-top: 0; }
