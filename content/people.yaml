@@ -45,6 +45,9 @@ members:
     photo: "static/img/people/wen-ze-chang.jpg"
 alumni_heading: {en: "Alumni", zh: "畢業成員"}
 alumni_groups:
+  - heading: {en: "Postdoctoral alumni", zh: "博士後研究員"}
+    people:
+      - {name: "Sheng-Yung Fu"}
   - heading: {en: "Doctoral alumni", zh: "博士班畢業"}
     people:
       - {name: "Feng-Yun Huang, Ph.D.", now: {en: "Assistant Professor, CTUST", zh: "CTUST 助理教授"}}
