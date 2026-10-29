@@ -54,6 +54,7 @@ alumni_groups:
       - {name: "Sheng-Yung Fu", note: {en: "(Postdoctoral researcher)", zh: "（博士後研究員）"}}
   - heading: {en: "Master's alumni", zh: "碩士班畢業"}
     people:
+      - {name: "Ying-Ju Lin"}   # 2025 碩士畢業（Jeff 2026-10-30）；英文名是威妥瑪拼音推的
       - {name: "Neng-Hsin Liang", now: {en: "Engineer, Cyntec Co., Ltd.", zh: "乾坤科技（Cyntec）工程師"}}
       - {name: "Wei-Chen Chao", now: {en: "Engineer, TSMC", zh: "台積電（TSMC）工程師"}}
       - {name: "Yi-Hsuan Tung", now: {en: "Engineer, TSMC", zh: "台積電（TSMC）工程師"}}
