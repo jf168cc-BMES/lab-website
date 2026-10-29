@@ -95,7 +95,7 @@ alumni_groups:
       - {name: "Kuan-Yu Chen"}
       - {name: "Yung-Yi Lee"}
       - {name: "Pei-Yun Hsieh"}
-      - {name: "Yen-Chi Chang", now: {en: "Studying at NYCU", zh: "就讀陽明交通大學"}}
+      - {name: "Yen-Chi Chang"}
       - {name: "Yuan-Ci Chou", now: {en: "Abbott, USA", zh: "任職於 Abbott（美國）"}}
       - {name: "Xi-Yu Peng", now: {en: "Engineer, TSMC", zh: "台積電（TSMC）工程師"}}
       - {name: "Yin-Ran Chuang", now: {en: "Studying at NTHU (Chemical Engineering)", zh: "就讀清華大學化學工程學系"}}
