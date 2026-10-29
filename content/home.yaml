@@ -34,7 +34,7 @@ why:
 papers:   # 首頁的精選論文小區塊：自動放最新 3 篇精選論文（標題、期刊、示意圖取自 publications.yaml）
   heading: {en: "Selected papers", zh: "精選論文"}
   more: {en: "All publications", zh: "全部論文"}
-pi:   # 「認識張老師」：照片取自 people.yaml 的 pi.photo_sm，簡介這句話改這裡
+pi:   # 「認識張老師」：照片取自 pi.yaml 的 pi.photo_sm，簡介這句話改這裡
   heading: {en: "Meet Prof. Chang", zh: "認識張老師"}
   text:
     en: "Chien-Wen (Jeff) Chang is a Professor and the Chair of the Department of Biomedical Engineering and Environmental Sciences at NTHU. He received his PhD from the University of Utah and did postdoctoral research at UC San Diego and UCLA. His research covers drug and gene delivery and stem cell engineering."

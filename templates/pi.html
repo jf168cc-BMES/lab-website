@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% set meta_title = page.meta.title | plain %}
+{% set meta_desc = page.pi.bio | plain %}
+{% block content %}
+<section class="page-head">
+  <div class="container">
+    <h1>{{ page.heading | t }}</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container pi-card">
+    {# 這張照片在第一個畫面裡，所以不延遲載入，並要求優先下載 #}
+    <img class="pi-photo" src="{{ url(page.pi.photo) }}" alt="{{ page.pi.photo_alt | plain }}" width="360" height="450" loading="eager" fetchpriority="high" decoding="async">
+    <div class="pi-info">
+      <h2>{{ page.pi.name | t }}</h2>
+      <p class="pi-role">{{ page.pi.role | tx }}</p>
+      <p>{{ page.pi.bio | tx }}</p>
+      <div class="pi-columns">
+        <div>
+          <h3 class="small-title">{{ page.pi.education_label | t }}</h3>
+          <ul class="plain-list">
+            {% for e in page.pi.education %}<li>{{ e | tx }}</li>{% endfor %}
+          </ul>
+        </div>
+        <div>
+          <h3 class="small-title">{{ page.pi.awards_label | t }}</h3>
+          <ul class="plain-list awards">
+            {% for a in page.pi.awards %}<li><span class="award-year">{{ a.year }}</span>{{ a | tx }}</li>{% endfor %}
+          </ul>
+          {% if page.pi.awards_note %}<p class="note">{{ page.pi.awards_note | tx }}</p>{% endif %}
+        </div>
+      </div>
+      <h3 class="small-title">{{ page.pi.links_label | t }}</h3>
+      <p class="profile-links">
+        <a href="{{ site.links.google_scholar }}" rel="noopener">Google Scholar</a>
+        <a href="{{ site.links.orcid }}" rel="noopener">ORCID</a>
+        <a href="{{ site.links.researchgate }}" rel="noopener">ResearchGate</a>
+        <a href="{{ site.links.scholars_nthu }}" rel="noopener">{{ '清華學人' if lang == 'zh' else 'NTHU Scholars' }}</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+{# 「加入我們」卡片的文字跟成員頁共用（content/people.yaml 的 join_card） #}
+<section class="section alt">
+  <div class="container">
+    <div class="card join-card">
+      <div>
+        <h2>{{ people.join_card.heading | t }}</h2>
+        <p>{{ people.join_card.text | tx }}</p>
+      </div>
+      <a class="btn btn-primary" href="{{ href('join') }}">{{ site.join_label | t }}</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

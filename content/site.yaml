@@ -35,8 +35,10 @@ links:
 nav:
   - key: research
     label: {en: "Research", zh: "研究"}
+  - key: pi
+    label: {en: "Professor", zh: "主持人"}   # 選單要短；頁面標題是 Principal Investigator／實驗室主持人（舊網站的選單也叫 PROFESSOR）
   - key: people
-    label: {en: "People", zh: "成員"}
+    label: {en: "Members", zh: "成員"}
   - key: publications
     label: {en: "Publications", zh: "論文"}
   - key: news
@@ -48,7 +50,7 @@ lang_switch: {en: "中文", zh: "English"}
 footer_note:
   en: "Website maintained by the lab. Last updated"
   zh: "網站由實驗室維護。最後更新"
-updated: "2026-10-28"   # 「最後更新」日期，頁尾與英文招生頁都用這個；改了網站內容就手動改這裡（YYYY-MM-DD）
+updated: "2026-10-29"   # 「最後更新」日期，頁尾與英文招生頁都用這個；改了網站內容就手動改這裡（YYYY-MM-DD）
 description:
   en: "Nanomedicine & Stem Cell Engineering Lab at National Tsing Hua University, Taiwan: non-viral gene delivery, nanomaterials for cancer therapy, 3D stem cell culture, and nano-sensors."
   zh: "清華大學生醫工程與環境科學系奈米醫藥與幹細胞工程實驗室：非病毒基因遞送、癌症治療奈米材料、3D 幹細胞培養與奈米感測器。"

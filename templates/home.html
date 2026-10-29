@@ -91,11 +91,11 @@
 <section class="section alt" id="pi">
   <div class="container">
     <div class="card pi-strip">
-      <img class="pi-strip-photo" src="{{ url(people.pi.photo_sm) }}" alt="{{ people.pi.photo_alt | plain }}" width="360" height="450" loading="lazy" decoding="async">
+      <img class="pi-strip-photo" src="{{ url(pi.photo_sm) }}" alt="{{ pi.photo_alt | plain }}" width="360" height="450" loading="lazy" decoding="async">
       <div class="pi-strip-text">
         <h2>{{ page.pi.heading | t }}</h2>
         <p>{{ page.pi.text | tx }}</p>
-        <a class="card-link" href="{{ href('people') }}">{{ page.pi.more | t }} <span aria-hidden="true">→</span></a>
+        <a class="card-link" href="{{ href('pi') }}">{{ page.pi.more | t }} <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </div>

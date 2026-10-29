@@ -11,7 +11,8 @@
 | `content/site.yaml` | 網站名稱、聯絡方式（含 `phone_tel`，手機點電話直接撥號用）、選單、頁尾連結（`links.nthu`、`links.department`）、**`updated`（最後更新日期）**、網址設定（`custom_domain`、`base_url`、`noindex`） |
 | `content/home.yaml` | 首頁（含「精選論文」「認識張老師」兩小段的標題與文字） |
 | `content/research.yaml` | 研究主題（每個主題的圖見下面「研究主題圖」）、實驗室技術 |
-| `content/people.yaml` | PI 與成員、校友；成員與校友沒資料時整段不顯示，改放「加入我們」卡片 |
+| `content/pi.yaml` | 主持人頁：簡介、學經歷、獲獎（首頁「認識張老師」的照片也取自這裡） |
+| `content/people.yaml` | 成員頁：現任成員（`members`）、各組畢業成員與交換生（`alumni_groups`）；兩者空的時候整段不顯示 |
 | `content/news.yaml` | 消息 |
 | `content/publications.yaml` | 論文清單，**由程式產生**，只手改 `selected`／`exclude`／`note`／`corresponding`／`co_corresponding`（其他共同通訊作者，名字後面也打 *）／`bib_fix`；Crossref 的卷期頁或作者不完整、寫錯時，把正確的值寫進那篇的 `bib_fix`（例：`bib_fix: {volume: '10', pages: 463-473}`），重抓一律以它為準（直接改 `volume`、`pages` 只有在 Crossref 那欄是空的時候會被沿用，Crossref 只給起始頁之類的不完整值會蓋掉）；ORCID 還沒有的論文可以手動補一筆，加上 `manual: true`（重抓時會保留） |
 | `content/join_international.yaml` | 英文國際生招生頁 |
@@ -27,7 +28,7 @@
 ## 常見修改
 
 - **加一則消息**：在 `content/news.yaml` 的 `items` 加一筆 `date`（`YYYY` 或 `YYYY-MM`）、`title`、`text`，可加 `doi` 或 `link`。順序不用管，會自動排。
-- **新增成員**：成員本人書面同意後，在 `content/people.yaml` 的 `members` 加 `name`、`role`、`topic`、`photo`（照片放 `static/img/people/`）。同意書不要放進這個資料夾。
+- **新增成員**：成員本人同意後，在 `content/people.yaml` 的 `members` 加 `name`、`role`、`topic`（選填）和 `photo`（照片放 `static/img/people/`，4:5、480×600 以內、不帶 EXIF）；沒有照片的人改寫 `initials`（姓名縮寫頭像）。成員離開就把那筆移到 `alumni_groups` 對應的組別（`now` 寫現況，沒有就省略）。同意書不要放進這個資料夾。
 - **更新論文**：`python tools/fetch_publications.py`（從 ORCID 0000-0002-0701-876X 重抓，保留手動欄位）。精選自動是張老師為通訊作者的論文；要個別排除寫 `selected: false`，要加進別篇寫 `selected: true`。
 - **改國際生頁的金額或日期**：`content/join_international.yaml`，每學期對官方頁核對一次。
 - **「最後更新」日期**：頁尾與英文招生頁顯示的日期是 `content/site.yaml` 的 `updated`（`YYYY-MM-DD`），**不再自動用產生網站的日期**；改了網站內容後手動改這個日期。

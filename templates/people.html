@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% import "_macros.html" as m %}
 {% set meta_title = page.meta.title | plain %}
-{% set meta_desc = page.pi.bio | plain %}
+{% set meta_desc = page.description | plain %}
 {% block content %}
 <section class="page-head">
   <div class="container">
@@ -9,52 +9,25 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container pi-card">
-    {# 這張照片在第一個畫面裡，所以不延遲載入，並要求優先下載 #}
-    <img class="pi-photo" src="{{ url(page.pi.photo) }}" alt="{{ page.pi.photo_alt | plain }}" width="360" height="450" loading="eager" fetchpriority="high" decoding="async">
-    <div class="pi-info">
-      <h2>{{ page.pi.name | t }}</h2>
-      <p class="pi-role">{{ page.pi.role | tx }}</p>
-      <p>{{ page.pi.bio | tx }}</p>
-      <div class="pi-columns">
-        <div>
-          <h3 class="small-title">{{ page.pi.education_label | t }}</h3>
-          <ul class="plain-list">
-            {% for e in page.pi.education %}<li>{{ e | tx }}</li>{% endfor %}
-          </ul>
-        </div>
-        <div>
-          <h3 class="small-title">{{ page.pi.awards_label | t }}</h3>
-          <ul class="plain-list awards">
-            {% for a in page.pi.awards %}<li><span class="award-year">{{ a.year }}</span>{{ a | tx }}</li>{% endfor %}
-          </ul>
-          {% if page.pi.awards_note %}<p class="note">{{ page.pi.awards_note | tx }}</p>{% endif %}
-        </div>
-      </div>
-      <h3 class="small-title">{{ page.pi.links_label | t }}</h3>
-      <p class="profile-links">
-        <a href="{{ site.links.google_scholar }}" rel="noopener">Google Scholar</a>
-        <a href="{{ site.links.orcid }}" rel="noopener">ORCID</a>
-        <a href="{{ site.links.researchgate }}" rel="noopener">ResearchGate</a>
-        <a href="{{ site.links.scholars_nthu }}" rel="noopener">{{ '清華學人' if lang == 'zh' else 'NTHU Scholars' }}</a>
-      </p>
-    </div>
-  </div>
-</section>
-
-{# 成員、畢業成員還沒有資料（要本人書面同意才放）就整段不顯示；people.yaml 填了資料才會出現 #}
+{# 成員頁：現任成員（有照片放照片，沒有的用姓名縮寫）、各組畢業成員。主持人在另一頁（pi.html）。
+   members、alumni_groups 空的時候整段不顯示 #}
 {% if page.members %}
-<section class="section alt">
+<section class="section">
   <div class="container">
     <h2 class="section-title">{{ page.members_heading | t }}</h2>
     <div class="cards cards-4 member-grid">
       {% for p in page.members %}
       <article class="card member-card">
-        {% if p.photo %}<img src="{{ url(p.photo) }}" alt="{{ p.name | plain }}" loading="lazy">{% endif %}
-        <h3>{{ p.name | t }}</h3>
-        <p class="member-role">{{ p.role | tx }}</p>
-        <p>{{ p.topic | tx }}</p>
+        {% if p.photo %}
+        <img class="member-photo" src="{{ url(p.photo) }}" alt="{{ p.name | plain }}" width="480" height="600" loading="lazy" decoding="async">
+        {% else %}
+        <div class="member-photo member-avatar" aria-hidden="true">{{ p.initials }}</div>
+        {% endif %}
+        <div class="member-body">
+          <h3>{{ p.name | t }}</h3>
+          <p class="member-role">{{ p.role | tx }}</p>
+          {% if p.topic %}<p class="member-topic">{{ p.topic | tx }}</p>{% endif %}
+        </div>
       </article>
       {% endfor %}
     </div>
@@ -62,18 +35,25 @@
 </section>
 {% endif %}
 
-{% if page.alumni %}
-<section class="section">
+{% if page.alumni_groups %}
+<section class="section alt">
   <div class="container">
     <h2 class="section-title">{{ page.alumni_heading | t }}</h2>
-    <ul class="plain-list">
-      {% for a in page.alumni %}<li>{{ a.name | t }} — {{ a.now | tx }}</li>{% endfor %}
-    </ul>
+    {% for g in page.alumni_groups %}
+    <div class="alumni-block">
+      <h3 class="small-title">{{ g.heading | t }} <span class="alumni-count">({{ g.people | length }})</span></h3>
+      <ul class="alumni-list">
+        {% for a in g.people %}
+        <li><span class="alumni-name">{{ a.name | t }}</span>{% if a.note %} <span class="alumni-note">{{ a.note | tx }}</span>{% endif %}{% if a.now %}<span class="alumni-now"> — {{ a.now | tx }}</span>{% endif %}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
   </div>
 </section>
 {% endif %}
 
-<section class="section{{ '' if page.members and not page.alumni else ' alt' }}">
+<section class="section{{ ' alt' if not page.alumni_groups else '' }}">
   <div class="container">
     <div class="card join-card">
       <div>

@@ -1,40 +1,115 @@
+# 成員頁（主持人在 pi.yaml）。
+# members＝現任成員：有照片的放 static/img/people/（4:5，480×600 以內，不帶 EXIF），沒有照片的寫 initials（姓名縮寫頭像）。
+# alumni_groups＝各組畢業成員與交換生；now＝現況（沒有就省略），note＝名字後面的註記。
+# 名單最初取自舊網站（nthubmeschanglab.wixsite.com/website/member，2026-10-29 讀取）；校友的現況沒有逐一核對過。
+# 要加入新成員：本人同意後在 members 加一筆；成員離開就移到 alumni_groups 對應的組別。
 meta:
   title:
-    en: "People | Nanomedicine & Stem Cell Engineering Lab"
+    en: "Members | Nanomedicine & Stem Cell Engineering Lab"
     zh: "成員｜奈米醫藥與幹細胞工程實驗室"
-heading: {en: "People", zh: "成員"}
-pi:
-  name: {en: "Chien-Wen (Jeff) Chang, Ph.D.", zh: "張建文 教授"}
-  role:
-    en: "Principal Investigator · Professor and Chair, Department of Biomedical Engineering and Environmental Sciences"
-    zh: "實驗室主持人 · 生醫工程與環境科學系教授兼系主任"
-  photo: "static/img/pi.jpg"
-  photo_sm: "static/img/pi-sm.jpg"   # 首頁小張照片，tools/make_images.py 從 pi.jpg 縮出來
-  photo_alt: {en: "Portrait of Prof. Chien-Wen Chang", zh: "張建文教授照片"}
-  bio:
-    en: "Chien-Wen (Jeff) Chang is a Professor and the Chair of the Department of Biomedical Engineering and Environmental Sciences at National Tsing Hua University (NTHU), Taiwan. He received his Ph.D. in Pharmaceutics and Pharmaceutical Chemistry from the University of Utah. He then trained as a CIRM Postdoctoral Fellow in Bioengineering at UC San Diego and a CNSI Postdoctoral Fellow in Chemistry and Biochemistry at UCLA. He previously served as Deputy Director of the Biomedical Science and Engineering Center at NTHU. His research interests include drug and gene delivery, molecular beacons, cell encapsulation, and stem cell engineering. He serves on the Board of Directors of the Biomaterials and Controlled Release Society (BCRS), Taiwan."
-    zh: "張建文教授現任國立清華大學生醫工程與環境科學系教授兼系主任。他在美國猶他大學藥劑學與藥物化學系取得博士學位，之後在加州大學聖地牙哥分校生物工程系擔任 CIRM 博士後研究員，在加州大學洛杉磯分校化學與生物化學系擔任 CNSI 博士後研究員。曾任清華大學生醫中心副主任。研究興趣包括藥物與基因遞送、分子信標、細胞包覆與幹細胞工程。現任中華民國生醫材料及藥物制放學會（BCRS）理事。"
-  education_label: {en: "Education and training", zh: "學經歷"}
-  education:
-    - {en: "Ph.D., Pharmaceutics and Pharmaceutical Chemistry, University of Utah, USA", zh: "美國猶他大學 藥劑學與藥物化學系 博士"}
-    - {en: "CIRM Postdoctoral Fellow, Bioengineering, University of California, San Diego", zh: "加州大學聖地牙哥分校 生物工程系 CIRM 博士後研究員"}
-    - {en: "CNSI Postdoctoral Fellow, Chemistry and Biochemistry, University of California, Los Angeles", zh: "加州大學洛杉磯分校 化學與生物化學系 CNSI 博士後研究員"}
-  awards_label: {en: "Honors", zh: "獲獎"}
-  awards:
-    - {year: 2026, en: "Prof. Chau-Jen Lee Research Scholar Award", zh: "李昭仁教授生醫工程研究學者獎"}
-    - {year: 2023, en: "Future Tech Award", zh: "未來科技獎"}
-    - {year: 2023, en: "Prof. Chau-Jen Lee Biomedical Engineering Award", zh: "李昭仁教授生醫工程獎"}
-    - {year: 2022, en: "19th National Innovation Excellence Award", zh: "第 19 屆國家新創精進獎"}
-    - {year: 2022, en: "Excellent Teaching Award, College of Nuclear Science, NTHU", zh: "清華大學原子科學院傑出教學獎"}
-    - {year: 2021, en: "Future Tech Award", zh: "未來科技獎"}
-    - {year: 2020, en: "17th National Innovation Award", zh: "第 17 屆國家新創獎"}
-  links_label: {en: "Profiles", zh: "學術檔案"}
-# members、alumni 是空的時候，「現任成員」「畢業成員」整段不顯示，改放下面的「加入我們」卡片；
-# 成員書面同意公開後，把資料填進 members／alumni，這兩段就會自動出現。
+heading: {en: "Members", zh: "成員"}
+description:
+  en: "Current members and alumni of the Nanomedicine & Stem Cell Engineering Lab at National Tsing Hua University, Taiwan."
+  zh: "清華大學奈米醫藥與幹細胞工程實驗室的現任成員與畢業成員。"
 members_heading: {en: "Current members", zh: "現任成員"}
-members: []
+members:
+  - name: "Ying-Fei Chung"
+    role: {en: "Research Associate", zh: "研究助理"}
+    photo: "static/img/people/ying-fei-chung.jpg"
+  - name: "Wei-Han Weng"
+    role: {en: "Ph.D. Student", zh: "博士生"}
+    topic: {en: "Live-cell imaging, cell isolation, gene delivery, microfluidic fabrication", zh: "即時活細胞影像、細胞分離、基因遞送、微流道製作"}
+    photo: "static/img/people/wei-han-weng.jpg"
+  - name: "Chung-Ting Hsu, M.D."
+    role: {en: "Ph.D. Student", zh: "博士生"}
+    topic: {en: "Attending Physician, Taichung Veterans General Hospital", zh: "臺中榮民總醫院主治醫師"}
+    photo: "static/img/people/chung-ting-hsu.jpg"
+  - name: "Ming-Han Li"
+    role: {en: "Ph.D. Student", zh: "博士生"}
+    photo: "static/img/people/ming-han-li.jpg"
+  - name: "Yu-Hsuan Chen"
+    role: {en: "Ph.D. Student", zh: "博士生"}
+    initials: "YC"
+  - name: "Yi-Ling Chen"
+    role: {en: "M.S. Student", zh: "碩士生"}
+    photo: "static/img/people/yi-ling-chen.jpg"
+  - name: "Rui-Xu Chang"
+    role: {en: "M.S. Student", zh: "碩士生"}
+    topic: {en: "Magnetic nano-complexes for gene delivery; cancer therapy. Manager of the cell culture room (BSL2).", zh: "磁性奈米複合物基因遞送、癌症治療。細胞培養室（BSL2）管理人。"}
+    photo: "static/img/people/rui-xu-chang.jpg"
+  - name: "Chia-Ke Chang"
+    role: {en: "M.S. Student", zh: "碩士生"}
+    initials: "CC"
+  - name: "Wen-Ze Chang"
+    role: {en: "Undergraduate Student", zh: "大學部學生"}
+    photo: "static/img/people/wen-ze-chang.jpg"
 alumni_heading: {en: "Alumni", zh: "畢業成員"}
-alumni: []
+alumni_groups:
+  - heading: {en: "Doctoral alumni", zh: "博士班畢業"}
+    people:
+      - {name: "Feng-Yun Huang, Ph.D.", now: {en: "Assistant Professor, CTUST", zh: "CTUST 助理教授"}}
+      - {name: "Wan-Rou Chen, Ph.D.", now: {en: "Assistant Professor, SZMC", zh: "SZMC 助理教授"}}
+      - {name: "Rih-Yang Huang, Ph.D.", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Chun-Chiao Chuang, Ph.D.", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+  - heading: {en: "Master's alumni", zh: "碩士班畢業"}
+    people:
+      - {name: "Neng-Hsin Liang", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Wei-Chen Chao", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Yi-Hsuan Tung", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Jia-Ying Luo", now: {en: "Exchange student", zh: "交換生"}}
+      - {name: "Hsiang-Tzu Lee", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Yen-Jong Tang", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Chia-Yu Lin", note: {en: "(5-year B.S./M.S. program)", zh: "（五年學碩）"}, now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Yi-Ting Tsai", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Zi-Yu Yan", now: {en: "Works at ITRI", zh: "任職於工研院（ITRI）"}}
+      - {name: "Si-Yu Kuo", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Jia-Jia Hsu", note: {en: "(5-year B.S./M.S. program)", zh: "（五年學碩）"}, now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Yu-Hsien Liu", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Jun-Chi Yang", now: {en: "Works at Reber Genetics", zh: "任職於 Reber Genetics"}}
+      - {name: "Bo-Jyun Lin", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Wei-Hsiang Huang", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Chu-Yun Wang", now: {en: "Works at EPIStar", zh: "任職於 EPIStar"}}
+      - {name: "Yu-Yun Jang", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Yen-Hua Chu", now: {en: "Works at Hsuan Hua Bio", zh: "任職於 Hsuan Hua Bio"}}
+      - {name: "Yi-Chen Bai", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Chun-Hung Chen", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Wei-Chen Liao", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Jie Luo"}
+      - {name: "Si-Yu Lin", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Yi-Hsien Lin", now: {en: "Works at AventaCell", zh: "任職於 AventaCell"}}
+      - {name: "Pei-Yin Chen", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Chen-Chan Hsieh", now: {en: "Postdoctoral researcher at NHRI", zh: "國家衛生研究院（NHRI）博士後研究員"}}
+      - {name: "Pin-Hsin Chiang"}
+  - heading: {en: "Bachelor's alumni", zh: "大學部畢業"}
+    people:
+      - {name: "Chieh-An Tsai"}
+      - {name: "Zhe-Kai Lu"}
+      - {name: "Chia-Ming Cheng", now: {en: "Studying at NTU", zh: "就讀臺灣大學（NTU）"}}
+      - {name: "Rui-Jun Liu", now: {en: "Studying at NTHU", zh: "就讀清華大學"}}
+      - {name: "Ji-Min Kim", now: {en: "Studying at KIST", zh: "就讀 KIST"}}
+      - {name: "Allexandra Elizabeth Audrea"}
+      - {name: "Yen-Chi Chang", now: {en: "Studying at NYCU", zh: "就讀陽明交通大學"}}
+      - {name: "Yuan-Ci Chou", now: {en: "Studying at UCSD (USA)", zh: "就讀加州大學聖地牙哥分校（美國）"}}
+      - {name: "Xi-Yu Peng", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Yin-Ran Chuang", now: {en: "Studying at NTHU (Chemical Engineering)", zh: "就讀清華大學化學工程學系"}}
+      - {name: "Chia-Ju Lin", now: {en: "Studying at NTHU (Materials Science and Engineering)", zh: "就讀清華大學材料科學工程學系"}}
+      - {name: "Ru-Huei Fan", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Yu-Hsiang Luo", now: {en: "Works at ITRI", zh: "任職於工研院（ITRI）"}}
+      - {name: "Ting-Fang Hsueh", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Si-Ying Lai", now: {en: "Works at Roche (Switzerland)", zh: "任職於 Roche（瑞士）"}}
+      - {name: "Sheng-Wen Lin", now: {en: "Works at AbbVie (USA)", zh: "任職於 AbbVie（美國）"}}
+      - {name: "Yu-Ting Hsiao"}
+      - {name: "Yi-Ning Chen", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "I-Hsuan Yang", now: {en: "Assistant Professor, SYSU", zh: "SYSU 助理教授"}}
+      - {name: "Liang-Wen Liao", now: {en: "Works in a science park", zh: "任職於科學園區"}}
+      - {name: "Wei-Chen Wei"}
+      - {name: "Yi-Yia Wang"}
+  - heading: {en: "International exchange students", zh: "國際交換生"}
+    people:
+      - {name: "Pallavi", now: {en: "India · 2024/08–2024/12", zh: "印度 · 2024/08–2024/12"}}
+      - {name: "Do Bao Tran", now: {en: "Vietnam · 2024/07–2024/09", zh: "越南 · 2024/07–2024/09"}}
+      - {name: "Kimi Mackenzie Wibowo", now: {en: "Indonesia · 2024/07–2024/08", zh: "印尼 · 2024/07–2024/08"}}
+      - {name: "Pamela Wijaya", now: {en: "Indonesia · 2023/10–2024/01", zh: "印尼 · 2023/10–2024/01"}}
 join_card:
   heading: {en: "Join the group", zh: "加入我們"}
   text:

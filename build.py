@@ -50,6 +50,7 @@ MD_LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
 PAGES = [
     ("en", "home", "index.html", "home.html", "home"),
     ("en", "research", "research/index.html", "research.html", "research"),
+    ("en", "pi", "pi/index.html", "pi.html", "pi"),
     ("en", "people", "people/index.html", "people.html", "people"),
     ("en", "publications", "publications/index.html", "publications.html", "pubpage"),
     ("en", "news", "news/index.html", "news.html", "news"),
@@ -57,6 +58,7 @@ PAGES = [
     ("en", "contact", "contact/index.html", "contact.html", "contact"),
     ("zh", "home", "zh/index.html", "home.html", "home"),
     ("zh", "research", "zh/research/index.html", "research.html", "research"),
+    ("zh", "pi", "zh/pi/index.html", "pi.html", "pi"),
     ("zh", "people", "zh/people/index.html", "people.html", "people"),
     ("zh", "publications", "zh/publications/index.html", "publications.html", "pubpage"),
     ("zh", "news", "zh/news/index.html", "news.html", "news"),
@@ -237,6 +239,7 @@ def build_site() -> list[str]:
     site = load_yaml("site")
     research = load_yaml("research")
     people = load_yaml("people")
+    pi = load_yaml("pi")["pi"]   # 主持人資料（content/pi.yaml）；主持人頁與首頁「認識張老師」都用
     news = load_yaml("news")
     pubs = load_yaml("publications")
     base_url = (site.get("base_url") or "").rstrip("/")
@@ -297,6 +300,7 @@ def build_site() -> list[str]:
             page=content,
             research=research,
             people=people,
+            pi=pi,
             news_items=[dict(n, date_label=fmt_date(n["date"], lang)) for n in news_items],
             pub_all=pub_all,
             selected_pubs=selected,

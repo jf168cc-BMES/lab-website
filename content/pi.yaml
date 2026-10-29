@@ -1,0 +1,32 @@
+meta:
+  title:
+    en: "Principal Investigator | Nanomedicine & Stem Cell Engineering Lab"
+    zh: "實驗室主持人｜奈米醫藥與幹細胞工程實驗室"
+heading: {en: "Principal Investigator", zh: "實驗室主持人"}
+# 首頁「認識張老師」的照片（photo_sm）與替代文字也取自這裡的 pi 區塊（build.py 以 pi 傳給所有模板）。
+pi:
+  name: {en: "Chien-Wen (Jeff) Chang, Ph.D.", zh: "張建文 教授"}
+  role:
+    en: "Principal Investigator · Professor and Chair, Department of Biomedical Engineering and Environmental Sciences"
+    zh: "實驗室主持人 · 生醫工程與環境科學系教授兼系主任"
+  photo: "static/img/pi.jpg"
+  photo_sm: "static/img/pi-sm.jpg"   # 首頁小張照片，tools/make_images.py 從 pi.jpg 縮出來
+  photo_alt: {en: "Portrait of Prof. Chien-Wen Chang", zh: "張建文教授照片"}
+  bio:
+    en: "Chien-Wen (Jeff) Chang is a Professor and the Chair of the Department of Biomedical Engineering and Environmental Sciences at National Tsing Hua University (NTHU), Taiwan. He received his Ph.D. in Pharmaceutics and Pharmaceutical Chemistry from the University of Utah. He then trained as a CIRM Postdoctoral Fellow in Bioengineering at UC San Diego and a CNSI Postdoctoral Fellow in Chemistry and Biochemistry at UCLA. He previously served as Deputy Director of the Biomedical Science and Engineering Center at NTHU. His research interests include drug and gene delivery, molecular beacons, cell encapsulation, and stem cell engineering. He serves on the Board of Directors of the Biomaterials and Controlled Release Society (BCRS), Taiwan."
+    zh: "張建文教授現任國立清華大學生醫工程與環境科學系教授兼系主任。他在美國猶他大學藥劑學與藥物化學系取得博士學位，之後在加州大學聖地牙哥分校生物工程系擔任 CIRM 博士後研究員，在加州大學洛杉磯分校化學與生物化學系擔任 CNSI 博士後研究員。曾任清華大學生醫中心副主任。研究興趣包括藥物與基因遞送、分子信標、細胞包覆與幹細胞工程。現任中華民國生醫材料及藥物制放學會（BCRS）理事。"
+  education_label: {en: "Education and training", zh: "學經歷"}
+  education:
+    - {en: "Ph.D., Pharmaceutics and Pharmaceutical Chemistry, University of Utah, USA", zh: "美國猶他大學 藥劑學與藥物化學系 博士"}
+    - {en: "CIRM Postdoctoral Fellow, Bioengineering, University of California, San Diego", zh: "加州大學聖地牙哥分校 生物工程系 CIRM 博士後研究員"}
+    - {en: "CNSI Postdoctoral Fellow, Chemistry and Biochemistry, University of California, Los Angeles", zh: "加州大學洛杉磯分校 化學與生物化學系 CNSI 博士後研究員"}
+  awards_label: {en: "Honors", zh: "獲獎"}
+  awards:
+    - {year: 2026, en: "Prof. Chau-Jen Lee Research Scholar Award", zh: "李昭仁教授生醫工程研究學者獎"}
+    - {year: 2023, en: "Future Tech Award", zh: "未來科技獎"}
+    - {year: 2023, en: "Prof. Chau-Jen Lee Biomedical Engineering Award", zh: "李昭仁教授生醫工程獎"}
+    - {year: 2022, en: "19th National Innovation Excellence Award", zh: "第 19 屆國家新創精進獎"}
+    - {year: 2022, en: "Excellent Teaching Award, College of Nuclear Science, NTHU", zh: "清華大學原子科學院傑出教學獎"}
+    - {year: 2021, en: "Future Tech Award", zh: "未來科技獎"}
+    - {year: 2020, en: "17th National Innovation Award", zh: "第 17 屆國家新創獎"}
+  links_label: {en: "Profiles", zh: "學術檔案"}

@@ -95,8 +95,8 @@ mark.tbc { background: #fff1a8; color: #5c4a00; padding: 0 0.25em; border-radius
 .brand-sub { font-size: var(--fs-xs); color: var(--muted); line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .site-nav { display: flex; align-items: center; gap: 22px; }
-.site-nav ul { display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; }
-.site-nav ul a { text-decoration: none; color: var(--ink); font-weight: 500; font-size: var(--fs-md); padding: 6px 0; border-bottom: 2px solid transparent; }
+.site-nav ul { display: flex; gap: 16px; list-style: none; margin: 0; padding: 0; }   /* 六個項目時 16px 才讓左邊的實驗室名稱不被截斷 */
+.site-nav ul a { text-decoration: none; color: var(--ink); font-weight: 500; font-size: var(--fs-md); padding: 6px 0; border-bottom: 2px solid transparent; white-space: nowrap; }
 .site-nav ul a:hover { color: var(--blue-700); }
 .site-nav ul a[aria-current="page"] { color: var(--blue-700); border-bottom-color: var(--gold-500); }
 .lang-switch { font-size: var(--fs-sm); text-decoration: none; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; white-space: nowrap; }
@@ -403,6 +403,23 @@ dialog.zoom img { display: block; max-width: 94vw; max-height: calc(94vh - 52px)
 .join-card { display: flex; align-items: center; justify-content: space-between; gap: 20px 32px; flex-wrap: wrap; padding: 28px 32px; }
 .join-card h2 { margin-bottom: 0.3em; }
 .join-card p { margin: 0; max-width: var(--measure); }
+/* 成員頁：現任成員卡片（照片 4:5；沒照片的人用姓名縮寫的色塊，卡片高度才一致） */
+.member-card { padding: 0; overflow: hidden; }
+.member-photo { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; background: var(--blue-50); }
+.member-avatar { display: grid; place-items: center; font-size: 2.6rem; font-weight: 700; letter-spacing: 0.06em; color: var(--blue-700); background: linear-gradient(160deg, var(--blue-100), var(--blue-50)); }
+.member-body { padding: 16px 18px 20px; }
+.member-card h3 { margin: 0 0 0.15em; font-size: var(--fs-lg); line-height: 1.3; }
+.member-role { margin: 0; color: var(--blue-700); font-weight: 600; font-size: var(--fs-md); }
+.member-topic { margin: 0.5em 0 0; color: var(--muted); font-size: var(--fs-sm); line-height: 1.55; }
+@media (max-width: 640px) { .member-card { display: grid; grid-template-columns: 112px 1fr; align-items: center; } .member-body { padding: 12px 14px; } .member-avatar { font-size: 1.8rem; } }
+/* 畢業成員：依學位分組，名單分欄排（窄螢幕自動變一欄） */
+.alumni-block + .alumni-block { margin-top: 32px; }
+.alumni-block .small-title { margin-top: 0; }
+.alumni-count { font-weight: 400; letter-spacing: 0; }
+.alumni-list { list-style: none; margin: 0; padding: 0; columns: 3 280px; column-gap: 36px; }
+.alumni-list li { break-inside: avoid; padding: 7px 0; border-bottom: 1px solid var(--line); line-height: 1.5; }
+.alumni-name { font-weight: 600; }
+.alumni-note, .alumni-now { color: var(--muted); font-size: var(--fs-sm); }
 
 /* ---------- Join ---------- */
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 28px; }
