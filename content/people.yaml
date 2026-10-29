@@ -90,6 +90,10 @@ alumni_groups:
       - {name: "Ji-Min Kim", now: {en: "Studying at KIST", zh: "就讀 KIST"}}
       - {name: "Allexandra Elizabeth Audrea"}
       - {name: "Sherry Huang"}
+      # 2023 專題生（Jeff 2026-10-30）；英文名是威妥瑪拼音推的，本人拼法不同再改。
+      - {name: "Kuan-Yu Chen"}
+      - {name: "Yung-Yi Lee"}
+      - {name: "Pei-Yun Hsieh"}
       - {name: "Yen-Chi Chang", now: {en: "Studying at NYCU", zh: "就讀陽明交通大學"}}
       - {name: "Yuan-Ci Chou", now: {en: "Abbott, USA", zh: "任職於 Abbott（美國）"}}
       - {name: "Xi-Yu Peng", now: {en: "Engineer, TSMC", zh: "台積電（TSMC）工程師"}}
@@ -99,6 +103,7 @@ alumni_groups:
       - {name: "Yu-Hsiang Luo", now: {en: "Engineer, ITRI", zh: "工研院（ITRI）工程師"}}
       - {name: "Ting-Fang Hsueh", now: {en: "Engineer, TSMC", zh: "台積電（TSMC）工程師"}}
       - {name: "Si-Ying Lai", now: {en: "Roche, Switzerland", zh: "任職於 Roche（瑞士）"}}
+      - {name: "Yang-Ching Ku"}   # 與 Si-Ying Lai 同一年（Jeff 2026-10-30）；英文名是威妥瑪拼音推的
       - {name: "Sheng-Wen Lin", now: {en: "AbbVie, USA", zh: "任職於 AbbVie（美國）"}}
       - {name: "Yu-Ting Hsiao"}
       - {name: "Yi-Ning Chen", now: {en: "Engineer, TSMC", zh: "台積電（TSMC）工程師"}}
