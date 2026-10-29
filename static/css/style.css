@@ -419,7 +419,6 @@ dialog.zoom img { display: block; max-width: 94vw; max-height: calc(94vh - 52px)
 /* 畢業成員：依學位分組，名單分欄排（窄螢幕自動變一欄） */
 .alumni-block + .alumni-block { margin-top: 32px; }
 .alumni-block .small-title { margin-top: 0; }
-.alumni-count { font-weight: 400; letter-spacing: 0; }
 .alumni-list { list-style: none; margin: 0; padding: 0; columns: 3 280px; column-gap: 36px; }
 .alumni-list li { break-inside: avoid; padding: 7px 0; border-bottom: 1px solid var(--line); line-height: 1.5; }
 .alumni-name { font-weight: 600; }
