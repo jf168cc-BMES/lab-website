@@ -112,14 +112,14 @@ alumni_groups:
       - {name: "Chun-Yu Lin"}
       - {name: "Chia-Hsuan Yeh"}
       - {name: "Ting-Yu Tu", now: {en: "Researcher, Scinopharm", zh: "台灣神隆（Scinopharm）研究員"}}
-      - {name: "Yu-Chen Huang"}
-      - {name: "Cheng-Wei Lu"}
-      - {name: "Pei-Ying Lai"}
-      - {name: "Chih-Chi Cheng"}
+      - {name: "Yu-Chen Huang", now: {en: "Staff, Pharmaceutical Industry", zh: "任職於製藥業"}}
+      - {name: "Cheng-Wei Lu", now: {en: "Engineer", zh: "工程師"}}
+      - {name: "Pei-Ying Lai", now: {en: "Engineer, ASML", zh: "艾司摩爾（ASML）工程師"}}
+      - {name: "Chih-Chi Cheng", now: {en: "Engineer, TSMC", zh: "台積電（TSMC）工程師"}}
       - {name: "Rih-Yang Huang", now: {en: "Chief Engineer, Cyntec Co., Ltd.", zh: "乾坤科技（Cyntec）主任工程師"}}
-      - {name: "Ying-Ying Lin"}
-      - {name: "Wei-Chen Hsiao"}
-      - {name: "Ming-Hui Chen"}
+      - {name: "Ying-Ying Lin", now: {en: "Researcher, Germany", zh: "研究員（德國）"}}
+      - {name: "Wei-Chen Hsiao", now: {en: "Patent Engineer, Hsinchu Science Park", zh: "新竹科學園區專利工程師"}}
+      - {name: "Ming-Hui Chen", now: {en: "Engineer, Pharmaceutical Industry", zh: "製藥業工程師"}}
       - {name: "Yi-Hsien Lin", now: {en: "Manager, AventaCell", zh: "AventaCell 經理"}}
   - heading: {en: "International exchange students", zh: "國際交換生"}
     people:
