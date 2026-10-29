@@ -10,7 +10,8 @@
 </section>
 
 {# 成員頁：現任成員（有照片放照片，沒有的用姓名縮寫）、各組畢業成員。主持人在另一頁（pi.html）。
-   members、alumni_groups 空的時候整段不顯示 #}
+   members、alumni_groups 空的時候整段不顯示；show_alumni: false 時校友整段先不顯示 #}
+{% set show_alumni = page.alumni_groups and page.get('show_alumni', true) %}
 {% if page.members %}
 <section class="section">
   <div class="container">
@@ -35,7 +36,7 @@
 </section>
 {% endif %}
 
-{% if page.alumni_groups %}
+{% if show_alumni %}
 <section class="section alt">
   <div class="container">
     <h2 class="section-title">{{ page.alumni_heading | t }}</h2>
@@ -53,7 +54,7 @@
 </section>
 {% endif %}
 
-<section class="section{{ ' alt' if not page.alumni_groups else '' }}">
+<section class="section{{ ' alt' if not show_alumni else '' }}">
   <div class="container">
     <div class="card join-card">
       <div>

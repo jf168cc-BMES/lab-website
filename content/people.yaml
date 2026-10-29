@@ -44,6 +44,7 @@ members:
   - name: "Wen-Ze Chang"
     role: {en: "Undergraduate Student", zh: "大學部學生"}
     photo: "static/img/people/wen-ze-chang.jpg"
+show_alumni: false   # 校友整段暫不顯示（Jeff 2026-10-30：「暫不顯示alumni」）；改成 true 就恢復，下面名單都還在
 alumni_heading: {en: "Alumni", zh: "畢業成員"}
 alumni_groups:
   - heading: {en: "Doctoral/Postdoctoral Alumni", zh: "博士班畢業／博士後研究員"}
