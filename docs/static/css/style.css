@@ -390,7 +390,7 @@ dialog.zoom img { display: block; max-width: 94vw; max-height: calc(94vh - 52px)
 .profile-links a { font-weight: 600; }
 
 /* ---------- People ---------- */
-.pi-card { display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: start; }
+.pi-card { display: grid; grid-template-columns: 200px 1fr; gap: 32px; align-items: start; }   /* 照片 200px 寬（Jeff 2026-10-29：「照片太大了」，原本 300px） */
 .pi-photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); background: var(--blue-50); }
 .pi-role { color: var(--blue-700); font-weight: 600; }
 .pi-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
@@ -398,7 +398,7 @@ dialog.zoom img { display: block; max-width: 94vw; max-height: calc(94vh - 52px)
 .plain-list li { padding: 6px 0; border-bottom: 1px solid var(--line); }
 .awards li { display: grid; grid-template-columns: 52px 1fr; gap: 8px; }
 .award-year { font-weight: 700; color: var(--blue-700); }
-@media (max-width: 860px) { .pi-card { grid-template-columns: 1fr; } .pi-photo { max-width: 300px; } .pi-columns { grid-template-columns: 1fr; } }
+@media (max-width: 860px) { .pi-card { grid-template-columns: 1fr; } .pi-photo { max-width: 200px; } .pi-columns { grid-template-columns: 1fr; } }
 /* 成員頁最下面的「加入我們」卡片 */
 .join-card { display: flex; align-items: center; justify-content: space-between; gap: 20px 32px; flex-wrap: wrap; padding: 28px 32px; }
 .join-card h2 { margin-bottom: 0.3em; }
