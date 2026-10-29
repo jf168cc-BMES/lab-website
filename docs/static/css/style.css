@@ -4,9 +4,9 @@
 /* 中文字型：Noto Sans TC 子集（只含網站用到的字，檔案在 static/fonts/，build.py 在原字型存在時自動更新）。
    只有中文頁用得到（英文頁的字型順序不含它）。400／500／700 三段指到同一個可變字型檔、只下載一次；
    網站裡的 600 字重會落到 700，跟之前 Google Fonts 只給 400／500／700 時的樣子一樣。 */
-@font-face { font-family: "Noto Sans TC"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/NotoSansTC-subset.woff?v=f79ca19d") format("woff"); }
-@font-face { font-family: "Noto Sans TC"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/NotoSansTC-subset.woff?v=f79ca19d") format("woff"); }
-@font-face { font-family: "Noto Sans TC"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/NotoSansTC-subset.woff?v=f79ca19d") format("woff"); }
+@font-face { font-family: "Noto Sans TC"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/NotoSansTC-subset.woff?v=afd286d3") format("woff"); }
+@font-face { font-family: "Noto Sans TC"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/NotoSansTC-subset.woff?v=afd286d3") format("woff"); }
+@font-face { font-family: "Noto Sans TC"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/NotoSansTC-subset.woff?v=afd286d3") format("woff"); }
 
 :root {
   --navy-950: #0b1830;

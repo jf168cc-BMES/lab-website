@@ -131,7 +131,7 @@ alumni_groups:
       - {name: "Pallavi", now: {en: "2024", zh: "2024 年"}}
       - {name: "Do Bao Tran", now: {en: "2024", zh: "2024 年"}}
       - {name: "Kimi Mackenzie Wibowo", now: {en: "2024", zh: "2024 年"}}
-      - {name: "Pamela Wijaya", now: {en: "2023–2024", zh: "2023–2024 年"}}
+      - {name: "Pamela Wijaya", now: {en: "2023", zh: "2023 年"}}
 join_card:
   heading: {en: "Join the group", zh: "加入我們"}
   text:
